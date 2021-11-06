@@ -1,9 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer_Navbar.Master" AutoEventWireup="true" CodeBehind="Customization.aspx.cs" Inherits="BIPJ_Grp2_Team5.Customization" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 511px;
+            width: 1191px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Customization</h1>
-    <table class="nav-justified" style="height: 511px">
+    <table class="auto-style1">
         <tr>
             <td>&nbsp;</td>
             <td style="width: 288px">Customization Menu</td>
