@@ -11,7 +11,7 @@ namespace BIPJ_Grp2_Team5
 {
 
 
-    public partial class Main
+    public partial class Customer_Navbar
     {
 
         /// <summary>
