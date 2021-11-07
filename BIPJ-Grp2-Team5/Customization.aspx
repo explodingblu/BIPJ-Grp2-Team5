@@ -1,11 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer_Navbar.Master" AutoEventWireup="true" CodeBehind="Customization.aspx.cs" Inherits="BIPJ_Grp2_Team5.Customization" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            height: 515px;
-            width: 1351px;
-        }
-    </style>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Customization</h1>

@@ -111,6 +111,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Customization.aspx" />
+    <Content Include="Customization_Accept.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -124,6 +125,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Customer_Navbar.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="ProductCatalogue.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -173,8 +175,22 @@
     <Compile Include="Customization.aspx.designer.cs">
       <DependentUpon>Customization.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customization_Accept.aspx.cs">
+      <DependentUpon>Customization_Accept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customization_Accept.aspx.designer.cs">
+      <DependentUpon>Customization_Accept.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCatalogue.aspx.cs">
+      <DependentUpon>ProductCatalogue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCatalogue.aspx.designer.cs">
+      <DependentUpon>ProductCatalogue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
