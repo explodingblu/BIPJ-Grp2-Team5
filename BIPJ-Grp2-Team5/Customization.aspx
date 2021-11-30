@@ -48,7 +48,7 @@
         <tr>
             <td>
                 <span style="text-decoration: underline"><strong>Compartment</strong></span><br />
-                <asp:DropDownList ID="DropDownList5" runat="server" OnSelectedIndexChanged="DropDownList5_SelectedIndexChanged" Height="16px" Width="186px">
+                <asp:DropDownList ID="DropDownList5" runat="server" Height="16px" Width="186px">
                 </asp:DropDownList>
             </td>
             <td style="text-decoration: underline">
