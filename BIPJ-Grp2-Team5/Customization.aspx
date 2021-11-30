@@ -47,7 +47,7 @@
         </tr>
         <tr>
             <td>
-                <span style="text-decoration: underline"><strong>Compartment</strong></span><br />
+                <span style="text-decoration: underline"><strong>test</strong></span><br />
                 <asp:DropDownList ID="DropDownList5" runat="server" Height="16px" Width="186px">
                 </asp:DropDownList>
             </td>
