@@ -7,12 +7,51 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+                <table class="auto-style1">
+                    <tr>
+                        <td>{Logo}</td>
+                        <td rowspan="9">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>overview</td>
+                    </tr>
+                    <tr>
+                        <td>product</td>
+                    </tr>
+                    <tr>
+                        <td>library</td>
+                    </tr>
+                    <tr>
+                        <td>donations</td>
+                    </tr>
+                    <tr>
+                        <td>accounts</td>
+                    </tr>
+                    <tr>
+                        <td>discounts</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>logout</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">footer</td>
+                    </tr>
+                </table>
         </div>
     </form>
 </body>

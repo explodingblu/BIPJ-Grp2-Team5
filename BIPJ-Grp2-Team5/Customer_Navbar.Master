@@ -5,6 +5,8 @@
 <html>
 <head runat="server">
     <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -12,9 +14,10 @@
         }
         .auto-style2 {
             text-align: center;
+            text-decoration: underline;
         }
         .auto-style4 {
-            width: 732px;
+            width: 1377px;
             height: 288px;
         }
         .auto-style14 {
@@ -50,7 +53,6 @@
 <body style="height: 342px">
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <table class="auto-style14">
                     <tr>
                         <td class="auto-style2" colspan="8"><strong>Eco-Verse</strong></td>
@@ -72,9 +74,8 @@
                     <tr>
                         <td class="auto-style21"></td>
                         <td class="auto-style4">
-                            <asp:ContentPlaceHolder ID="head" runat="server">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                             </asp:ContentPlaceHolder>
-
                         </td>
                         <td class="auto-style23"></td>
                     </tr>
@@ -82,7 +83,6 @@
                         <td colspan="3" class="auto-style22">Footer</td>
                     </tr>
                 </table>
-            </asp:ContentPlaceHolder>
         </div>
     </form>
 </body>

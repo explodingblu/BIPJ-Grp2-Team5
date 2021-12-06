@@ -15,7 +15,7 @@ namespace BIPJ_Grp2_Team5
         }
         protected void ShopButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Product.aspx");
+            Response.Redirect("ProductCatalogue.aspx");
         }
     }
 }

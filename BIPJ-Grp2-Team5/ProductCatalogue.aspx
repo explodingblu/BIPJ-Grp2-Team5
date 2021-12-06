@@ -1,62 +1,40 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer_Navbar.Master" AutoEventWireup="true" CodeBehind="ProductCatalogue.aspx.cs" Inherits="BIPJ_Grp2_Team5.ProductCatalogue" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style2 {
-            width: 100%;
+        .auto-style25 {
+            text-align: center;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    <table class="auto-style2">
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Image ID="Image1" runat="server" Height="125px" Width="125px" />
-                <br />
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                <br />
-                <asp:Button ID="Button1" runat="server" Text="Button" />
-            </td>
-            <td>
-                <asp:Image ID="Image2" runat="server" Height="125px" Width="125px" />
-                <br />
-                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                <br />
-                <asp:Button ID="Button2" runat="server" Text="Button" />
-            </td>
-            <td>
-                <asp:Image ID="Image3" runat="server" Height="125px" Width="125px" />
-                <br />
-                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                <br />
-                <asp:Button ID="Button3" runat="server" Text="Button" />
-            </td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-    
+       <table class="auto-style14">
+           <tr>
+               <td>
+                   <asp:LinkButton ID="HomeBC" runat="server">Home</asp:LinkButton>
+&nbsp;&gt; Shop</td>
+               <td class="auto-style2"><strong>Shop</strong></td>
+               <td>&nbsp;</td>
+               <td>
+                   <asp:TextBox ID="SeachInput" runat="server"></asp:TextBox>
+                   <asp:Button ID="SearchButton" runat="server" Text="Search" />
+               </td>
+           </tr>
+           <tr>
+               <td>&nbsp;</td>
+               <td class="auto-style25">
+                   <asp:Image ID="ProdImg2" runat="server" Height="110px" Width="132px" />
+                   <br />
+                   <asp:Label ID="ProdLabel2" runat="server" Text="Label"></asp:Label>
+               </td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+           </tr>
+           <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+           </tr>
+       </table>
+&nbsp;
 </asp:Content>
