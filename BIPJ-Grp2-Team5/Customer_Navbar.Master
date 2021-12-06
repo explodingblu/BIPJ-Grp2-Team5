@@ -5,13 +5,83 @@
 <html>
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 416px;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+        .auto-style4 {
+            width: 732px;
+            height: 288px;
+        }
+        .auto-style14 {
+            width: 100%;
+        }
+        .auto-style15 {
+            width: 79px;
+        }
+        .auto-style17 {
+            width: 4137px;
+        }
+        .auto-style18 {
+            width: 130px;
+        }
+        .auto-style19 {
+            width: 256px;
+        }
+        .auto-style20 {
+            width: 194px;
+        }
+        .auto-style21 {
+            width: 88px;
+            height: 288px;
+        }
+        .auto-style22 {
+            height: 128px;
+        }
+        .auto-style23 {
+            height: 288px;
+        }
+    </style>
 </head>
-<body>
+<body style="height: 342px">
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <table class="auto-style14">
+                    <tr>
+                        <td class="auto-style2" colspan="8"><strong>Eco-Verse</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style20">Logo</td>
+                        <td class="auto-style17">&nbsp;</td>
+                        <td>Home</td>
+                        <td class="auto-style19">
+                            <asp:Button ID="ShopButton" runat="server" OnClick="ShopButton_Click" Text="Shop" Width="75px" />
+                        </td>
+                        <td class="auto-style18">Educational</td>
+                        <td class="auto-style15">Events</td>
+                        <td>Accounts</td>
+                        <td>Cart</td>
+                    </tr>
+                </table>
+&nbsp;<table class="auto-style1">
+                    <tr>
+                        <td class="auto-style21"></td>
+                        <td class="auto-style4">
+                            <asp:ContentPlaceHolder ID="head" runat="server">
+                            </asp:ContentPlaceHolder>
+
+                        </td>
+                        <td class="auto-style23"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="auto-style22">Footer</td>
+                    </tr>
+                </table>
             </asp:ContentPlaceHolder>
         </div>
     </form>

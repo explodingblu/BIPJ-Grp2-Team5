@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer_Navbar.Master" AutoEventWireup="true" CodeBehind="Customization.aspx.cs" Inherits="BIPJ_Grp2_Team5.Customization" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <h1>Customization</h1>
     <table class="auto-style1">
         <tr>
@@ -41,28 +39,20 @@
                 </asp:DropDownList>
             </td>
             <td>
-                <span style="text-decoration: underline"><strong>Add Image</strong></span><br />
-                <asp:FileUpload ID="FileUpload1" runat="server" />
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <span style="text-decoration: underline"><strong>test</strong></span><br />
+                <span style="text-decoration: underline"><strong>Compartment</strong></span><br />
                 <asp:DropDownList ID="DropDownList5" runat="server" Height="16px" Width="186px">
                 </asp:DropDownList>
             </td>
             <td style="text-decoration: underline">
-                <strong>Add Texts<br />
-                </strong>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <br />
-                <span style="text-decoration: underline"><strong>Stackable</strong></span><asp:CheckBoxList ID="CheckBoxList1" runat="server" style="margin-top: 0px" Height="17px" Width="186px">
-                </asp:CheckBoxList>
-            </td>
+                &nbsp;</td>
             <td style="text-decoration: underline">
                 <strong>Any Comments?<br />
                 </strong>
