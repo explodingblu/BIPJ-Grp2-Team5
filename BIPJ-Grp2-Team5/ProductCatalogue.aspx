@@ -13,7 +13,10 @@
                    <asp:LinkButton ID="HomeBC" runat="server">Home</asp:LinkButton>
 &nbsp;&gt; Shop</td>
                <td class="auto-style2"><strong>Shop</strong></td>
-               <td>&nbsp;</td>
+               <td>Sort By:
+                   <asp:DropDownList ID="SortDD" runat="server">
+                   </asp:DropDownList>
+               </td>
                <td>
                    <asp:TextBox ID="SeachInput" runat="server"></asp:TextBox>
                    <asp:Button ID="SearchButton" runat="server" Text="Search" />

@@ -11,6 +11,9 @@
         .auto-style1 {
             width: 100%;
         }
+        .auto-style2 {
+            width: 132px;
+        }
     </style>
 </head>
 <body>
@@ -18,35 +21,37 @@
         <div>
                 <table class="auto-style1">
                     <tr>
-                        <td>{Logo}</td>
+                        <td class="auto-style2">{Logo}</td>
                         <td rowspan="9">
                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                             </asp:ContentPlaceHolder>
                         </td>
                     </tr>
                     <tr>
-                        <td>overview</td>
+                        <td class="auto-style2">overview</td>
                     </tr>
                     <tr>
-                        <td>product</td>
+                        <td class="auto-style2">
+                            <asp:Button ID="AdminProdNavButton" runat="server" Text="Product" />
+                        </td>
                     </tr>
                     <tr>
-                        <td>library</td>
+                        <td class="auto-style2">library</td>
                     </tr>
                     <tr>
-                        <td>donations</td>
+                        <td class="auto-style2">donations</td>
                     </tr>
                     <tr>
-                        <td>accounts</td>
+                        <td class="auto-style2">accounts</td>
                     </tr>
                     <tr>
-                        <td>discounts</td>
+                        <td class="auto-style2">discounts</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td class="auto-style2">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>logout</td>
+                        <td class="auto-style2">logout</td>
                     </tr>
                     <tr>
                         <td colspan="2">footer</td>

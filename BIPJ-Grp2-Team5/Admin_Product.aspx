@@ -4,10 +4,14 @@
         .auto-style2 {
             text-align: center;
         }
+        .auto-style3 {
+            width: 100%;
+            height: 204px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="auto-style1">
+    <table class="auto-style3">
     <tr>
         <td>&nbsp;</td>
         <td class="auto-style2">Product</td>

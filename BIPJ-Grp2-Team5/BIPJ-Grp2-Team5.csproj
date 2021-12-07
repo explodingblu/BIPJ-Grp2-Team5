@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin_Product.aspx" />
+    <Content Include="Admin_Product_Add.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -174,6 +175,13 @@
     </Compile>
     <Compile Include="Admin_Product.aspx.designer.cs">
       <DependentUpon>Admin_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Product_Add.aspx.cs">
+      <DependentUpon>Admin_Product_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Product_Add.aspx.designer.cs">
+      <DependentUpon>Admin_Product_Add.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

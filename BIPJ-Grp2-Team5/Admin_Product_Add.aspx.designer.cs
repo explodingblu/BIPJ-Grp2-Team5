@@ -11,61 +11,79 @@ namespace BIPJ_Grp2_Team5
 {
 
 
-    public partial class ProductCatalogue
+    public partial class Admin_Product_Add
     {
 
         /// <summary>
-        /// HomeBC control.
+        /// ProdImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton HomeBC;
+        protected global::System.Web.UI.WebControls.Image ProdImg;
 
         /// <summary>
-        /// SortDD control.
+        /// ProdImg_FileUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SortDD;
+        protected global::System.Web.UI.WebControls.FileUpload ProdImg_FileUpload;
 
         /// <summary>
-        /// SeachInput control.
+        /// ProdID_Label control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SeachInput;
+        protected global::System.Web.UI.WebControls.Label ProdID_Label;
 
         /// <summary>
-        /// SearchButton control.
+        /// ProdName_Input control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SearchButton;
+        protected global::System.Web.UI.WebControls.TextBox ProdName_Input;
 
         /// <summary>
-        /// ProdImg2 control.
+        /// ProdPrice_Input control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ProdImg2;
+        protected global::System.Web.UI.WebControls.TextBox ProdPrice_Input;
 
         /// <summary>
-        /// ProdLabel2 control.
+        /// ProdDesc_Input control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ProdLabel2;
+        protected global::System.Web.UI.WebControls.TextBox ProdDesc_Input;
+
+        /// <summary>
+        /// ProdAdd_Btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ProdAdd_Btn;
+
+        /// <summary>
+        /// ProdBackBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ProdBackBtn;
     }
 }
