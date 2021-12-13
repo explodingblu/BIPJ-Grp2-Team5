@@ -107,6 +107,10 @@
   <ItemGroup>
     <Content Include="Admin_Product.aspx" />
     <Content Include="Admin_Product_Add.aspx" />
+    <Content Include="App_Data\MainDB.mdf" />
+    <Content Include="App_Data\MainDB_log.ldf">
+      <DependentUpon>MainDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -128,6 +132,7 @@
     <Content Include="Customer_Navbar.Master" />
     <Content Include="Admin_Navbar.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
     <Content Include="ProductCatalogue.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -209,6 +214,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="ProductCatalogue.aspx.cs">
       <DependentUpon>ProductCatalogue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -225,9 +231,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

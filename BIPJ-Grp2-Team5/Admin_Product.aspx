@@ -20,7 +20,13 @@
     <tr>
         <td>&nbsp;</td>
         <td class="auto-style2">
-            <asp:GridView ID="gvProduct" runat="server" Width="749px">
+            <asp:GridView ID="gvProduct" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged">
+                <Columns>
+                    <asp:BoundField DataField="Product_ID" HeaderText="Product ID" />
+                    <asp:BoundField DataField="Product_Name" HeaderText="Product Name" />
+                    <asp:BoundField DataField="Product_Price" HeaderText="Product Price" />
+                    <asp:CommandField ShowSelectButton="True" />
+                </Columns>
             </asp:GridView>
         </td>
         <td>&nbsp;</td>
@@ -28,7 +34,7 @@
     <tr>
         <td>&nbsp;</td>
         <td class="auto-style2">
-            <asp:Button ID="AddProdButton" runat="server" Text="Add Product" />
+            <asp:Button ID="Btn_AddProdPage" runat="server" Text="Add Product" OnClick="Btn_AddProdPage_Click" />
         </td>
         <td>&nbsp;</td>
     </tr>

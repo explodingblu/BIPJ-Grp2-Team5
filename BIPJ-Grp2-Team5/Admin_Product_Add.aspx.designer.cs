@@ -15,13 +15,13 @@ namespace BIPJ_Grp2_Team5
     {
 
         /// <summary>
-        /// ProdImg control.
+        /// lbl_result control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ProdImg;
+        protected global::System.Web.UI.WebControls.Label lbl_result;
 
         /// <summary>
         /// ProdImg_FileUpload control.
@@ -33,40 +33,40 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.FileUpload ProdImg_FileUpload;
 
         /// <summary>
-        /// ProdID_Label control.
+        /// tb_ProdID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ProdID_Label;
+        protected global::System.Web.UI.WebControls.TextBox tb_ProdID;
 
         /// <summary>
-        /// ProdName_Input control.
+        /// tb_ProdName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ProdName_Input;
+        protected global::System.Web.UI.WebControls.TextBox tb_ProdName;
 
         /// <summary>
-        /// ProdPrice_Input control.
+        /// tb_ProdPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ProdPrice_Input;
+        protected global::System.Web.UI.WebControls.TextBox tb_ProdPrice;
 
         /// <summary>
-        /// ProdDesc_Input control.
+        /// tb_ProdDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ProdDesc_Input;
+        protected global::System.Web.UI.WebControls.TextBox tb_ProdDesc;
 
         /// <summary>
         /// ProdAdd_Btn control.

@@ -5,20 +5,8 @@
         .auto-style3 {
             text-align: center;
         }
-        .auto-style5 {
-            width: 145px;
-        }
         .auto-style6 {
             width: 151px;
-        }
-        .auto-style7 {
-            width: 156px;
-        }
-        .auto-style8 {
-            width: 161px;
-        }
-        .auto-style9 {
-            width: 168px;
         }
         .auto-style10 {
             width: 175px;
@@ -40,77 +28,75 @@
             height: 33px;
             text-align: right;
         }
-        .auto-style18 {
-            width: 168px;
-            height: 33px;
-        }
         .auto-style19 {
             height: 33px;
             text-align: center;
+            width: 151px;
         }
     
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="auto-style3">
+    &nbsp;<table class="auto-style3">
     <tr>
-        <td class="auto-style7"></td>
+        <td class="auto-style10">&nbsp;</td>
         <td class="auto-style10" colspan="2"></td>
         <td class="auto-style6"></td>
     </tr>
     <tr>
-        <td class="auto-style8"></td>
+        <td class="auto-style3">
+            &nbsp;</td>
         <td class="auto-style3" colspan="2">
-            <asp:Image ID="ProdImg" runat="server" Height="143px" Width="150px" />
+            <asp:Label ID="lbl_result" runat="server" Text="&lt;&lt; &gt;&gt;"></asp:Label>
         </td>
-        <td class="auto-style5"></td>
+        <td class="auto-style6"></td>
     </tr>
     <tr>
-        <td class="auto-style9">&nbsp;</td>
+        <td class="auto-style13">&nbsp;</td>
         <td class="auto-style13">Product Image :&nbsp; </td>
         <td class="auto-style16">
             <asp:FileUpload ID="ProdImg_FileUpload" runat="server" />
         </td>
-        <td>&nbsp;</td>
+        <td class="auto-style6">&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style9">&nbsp;</td>
+        <td class="auto-style13">&nbsp;</td>
         <td class="auto-style13">Product ID :&nbsp; </td>
         <td class="auto-style16">
-            <asp:Label ID="ProdID_Label" runat="server" Text="Label"></asp:Label>
+            <asp:TextBox ID="tb_ProdID" runat="server"></asp:TextBox>
         </td>
-        <td>&nbsp;</td>
+        <td class="auto-style6">&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style9">&nbsp;</td>
+        <td class="auto-style13">&nbsp;</td>
         <td class="auto-style13">Name :&nbsp; </td>
         <td class="auto-style16">
-            <asp:TextBox ID="ProdName_Input" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tb_ProdName" runat="server"></asp:TextBox>
         </td>
-        <td>&nbsp;</td>
+        <td class="auto-style6">&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style9">&nbsp;</td>
+        <td class="auto-style13">&nbsp;</td>
         <td class="auto-style13">Price : </td>
         <td class="auto-style16">
-            <asp:TextBox ID="ProdPrice_Input" runat="server"></asp:TextBox>
+            $<asp:TextBox ID="tb_ProdPrice" runat="server"></asp:TextBox>
         </td>
-        <td>&nbsp;</td>
+        <td class="auto-style6">&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style9">&nbsp;</td>
+        <td class="auto-style13">&nbsp;</td>
         <td class="auto-style13">Description : </td>
         <td class="auto-style16">
-            <asp:TextBox ID="ProdDesc_Input" runat="server" Height="68px" Width="374px"></asp:TextBox>
+            <asp:TextBox ID="tb_ProdDesc" runat="server" Height="68px" Width="374px"></asp:TextBox>
         </td>
-        <td>&nbsp;</td>
+        <td class="auto-style6">&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style18"></td>
+        <td class="auto-style15">&nbsp;</td>
         <td class="auto-style15"></td>
         <td class="auto-style17">&nbsp;<asp:Button ID="ProdAdd_Btn" runat="server" OnClick="ProdAdd_Btn_Click" Text="Add" Width="88px" />
 &nbsp;&nbsp;
-            <asp:Button ID="ProdBackBtn" runat="server" Text="Back" Width="92px" />
+            <asp:Button ID="ProdBackBtn" runat="server" Text="Back" Width="92px" OnClick="ProdBackBtn_Click" />
         </td>
         <td class="auto-style19">&nbsp;</td>
     </tr>

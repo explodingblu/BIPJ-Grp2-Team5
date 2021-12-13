@@ -25,6 +25,9 @@
             <td style="height: 22px">
                 <span style="text-decoration: underline"><strong>Size</strong></span><br />
                 <asp:DropDownList ID="DropDownList3" runat="server" Height="21px" Width="186px">
+                    <asp:ListItem>Small</asp:ListItem>
+                    <asp:ListItem>Medium</asp:ListItem>
+                    <asp:ListItem>Large</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td style="height: 22px">
