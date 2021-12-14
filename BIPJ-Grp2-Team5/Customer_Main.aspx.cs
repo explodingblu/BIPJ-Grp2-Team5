@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace BIPJ_Grp2_Team5
 {
-    public partial class Customer_Navbar : System.Web.UI.MasterPage
+    public partial class Customer_Main : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        
     }
 }
