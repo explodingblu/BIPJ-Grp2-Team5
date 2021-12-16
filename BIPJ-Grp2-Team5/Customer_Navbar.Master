@@ -63,10 +63,10 @@
                             <!--End of col-md-4-->
                             <div class="col-md-4">
                                 <div class="social_icon text-right">
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                    <a href=""><i class="fa fa-twitter"></i></a>
-                                    <a href=""><i class="fa fa-google-plus"></i></a>
-                                    <a href=""><i class="fa fa-youtube"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
                                 </div>
                             </div>
                             <!--End of col-md-4-->
@@ -96,7 +96,7 @@
                                 <ul class="nav navbar-nav navbar-right main_menu">
                                     <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
                                     <li><a href="#welcome">about</a></li>
-                                    <li><a href="#portfolio">project</a></li>
+                                    <li><a href="ProductCatalogue.aspx">Shop</a></li>
                                     <li><a href="#counter">achivment</a></li>
                                     <li><a href="#event">event</a></li>
                                     <li><a href="#testimonial">testimonial</a></li>

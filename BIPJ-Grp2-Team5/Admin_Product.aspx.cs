@@ -9,7 +9,7 @@ namespace BIPJ_Grp2_Team5
 {
     public partial class Admin_Product : System.Web.UI.Page
     {
-        Product aProd = new Product();
+        /*Product aProd = new Product();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -43,6 +43,6 @@ namespace BIPJ_Grp2_Team5
             // Redirect to next page, with the Product Id added to the URL,
             // e.g. ProductDetails.aspx?ProdID=1
             //Response.Redirect("ProductDetails.aspx?ProdID=" + prodID);
-        }
+        }*/
     }
 }

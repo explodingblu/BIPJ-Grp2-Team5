@@ -3,7 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section id="slider">
-<section id="slider">
             <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -22,7 +21,7 @@
                                     <h3>Protect</h3>
                                     <h2>nature the environment</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="" class="custom_btn">Read  More</a>
+                                    <a href="#" class="custom_btn">Read  More</a>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +35,7 @@
                                     <h3>Protect</h3>
                                     <h2>nature the environment</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="" class="custom_btn">Read  More</a>
+                                    <a href="#" class="custom_btn">Read  More</a>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +49,7 @@
                                     <h3>Protect</h3>
                                     <h2>nature the environment</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="" class="custom_btn">Read  More</a>
+                                    <a href="#" class="custom_btn">Read  More</a>
                                 </div>
                             </div>
                         </div>

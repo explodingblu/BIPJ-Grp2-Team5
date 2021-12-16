@@ -13,23 +13,5 @@ namespace BIPJ_Grp2_Team5
 
     public partial class Admin_Product
     {
-
-        /// <summary>
-        /// gvProduct control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvProduct;
-
-        /// <summary>
-        /// Btn_AddProdPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_AddProdPage;
     }
 }

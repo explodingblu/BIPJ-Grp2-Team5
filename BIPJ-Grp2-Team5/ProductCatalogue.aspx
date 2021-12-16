@@ -1,41 +1,54 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer_Navbar.Master" AutoEventWireup="true" CodeBehind="ProductCatalogue.aspx.cs" Inherits="BIPJ_Grp2_Team5.ProductCatalogue" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style25 {
+        .auto-style3 {
             text-align: center;
+            text-decoration: underline;
+            width: 515px;
+        }
+        .auto-style4 {
+            width: 515px
+        }
+        .auto-style5 {
+            text-align: center;
+            width: 342px;
+        }
+        .auto-style6 {
+            width: 342px
+        }
+        .auto-style7 {
+            text-align: center;
+            width: 408px;
+        }
+        .auto-style8 {
+            width: 408px
+        }
+        .auto-style9 {
+            width: 101px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <table class="auto-style14">
+&nbsp;<table class="nav-justified">
            <tr>
-               <td>
-                   <asp:LinkButton ID="HomeBC" runat="server">Home</asp:LinkButton>
-&nbsp;&gt; Shop</td>
-               <td class="auto-style2"><strong>Shop</strong></td>
-               <td>Sort By:
-                   <asp:DropDownList ID="SortDD" runat="server">
-                   </asp:DropDownList>
-               </td>
-               <td>
-                   <asp:TextBox ID="SeachInput" runat="server"></asp:TextBox>
-                   <asp:Button ID="SearchButton" runat="server" Text="Search" />
-               </td>
-           </tr>
-           <tr>
-               <td>&nbsp;</td>
-               <td class="auto-style25">
-                   <asp:Image ID="ProdImg2" runat="server" Height="110px" Width="132px" />
-                   <br />
-                   <asp:Label ID="ProdLabel2" runat="server" Text="Label"></asp:Label>
-               </td>
-               <td>&nbsp;</td>
+               <td class="auto-style9">&nbsp;</td>
+               <td class="auto-style5">&nbsp;</td>
+               <td class="auto-style3"><h1>Product Catalogue</h1></td>
+               <td class="auto-style7">&nbsp;</td>
                <td>&nbsp;</td>
            </tr>
            <tr>
+               <td class="auto-style9">&nbsp;</td>
+               <td class="auto-style6">&nbsp;</td>
+               <td class="auto-style4">&nbsp;</td>
+               <td class="auto-style8">&nbsp;</td>
                <td>&nbsp;</td>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
+           </tr>
+           <tr>
+               <td class="auto-style9">&nbsp;</td>
+               <td class="auto-style6">&nbsp;</td>
+               <td class="auto-style4">&nbsp;</td>
+               <td class="auto-style8">&nbsp;</td>
                <td>&nbsp;</td>
            </tr>
        </table>
