@@ -35,7 +35,7 @@
         }
 
         .lead { font-size: 1.5rem; font-weight: 300; }
-        .container { margin: 150px auto; max-width: 960px; color: #000; }
+        .container { margin-left: 200px; max-width: 960px; color: #000; }
 
         .side-bar {
           width: 23.2rem;
@@ -410,10 +410,22 @@
         .side-bar.collapse .chat-item-avatar-wrapper::before {
           opacity: 1;
         }       
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style3 {
+            height: 340px;
+        }
+        .auto-style4 {
+            height: 340px;
+            width: 204px;
+        }
+
+
     </style>
 </head>
 <body>
-        <div class="side-bar">
+    <div class="side-bar">
       <div class="logo-name-wrapper">
         <div class="logo-name">
           <img src="./assets/images/logo.png" class="logo" alt="logo app" srcset=""/>
@@ -473,13 +485,18 @@
       </ul>
 
     </div>
-    <div class="container"><div style="margin:30px auto"><div id="carbon-block"></div>
+    <div class="container">
+        <div style="margin:30px auto">
+            <div id="carbon-block">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+       </div>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- CSSScript Demo Page -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
+<!-- <ins class="auto-style2"
+     style="display:inline-block;"
      data-ad-client="ca-pub-2783044520727903"
-     data-ad-slot="3025259193"></ins>
+     data-ad-slot="3025259193"></ins>-->
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script></div></div>
@@ -499,7 +516,5 @@
         };
       }
     </script>
-                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                            </asp:ContentPlaceHolder>
 </body>
 </html>

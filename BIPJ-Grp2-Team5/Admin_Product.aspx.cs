@@ -9,7 +9,7 @@ namespace BIPJ_Grp2_Team5
 {
     public partial class Admin_Product : System.Web.UI.Page
     {
-        /*Product aProd = new Product();
+        Product aProd = new Product();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,7 +26,7 @@ namespace BIPJ_Grp2_Team5
             gvProduct.DataBind();
         }
 
-        protected void Btn_AddProdPage_Click(object sender, EventArgs e)
+        protected void Btn_AddProd_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin_Product_Add.aspx");
         }
@@ -36,13 +36,14 @@ namespace BIPJ_Grp2_Team5
             // Get the currently selected row.
             GridViewRow row = gvProduct.SelectedRow;
 
-            // Get Product ID from the selected row, which is the 
+            //Get Product ID from the selected row, which is the
             // first row, i.e. index 0.
             string prodID = row.Cells[0].Text;
 
             // Redirect to next page, with the Product Id added to the URL,
             // e.g. ProductDetails.aspx?ProdID=1
-            //Response.Redirect("ProductDetails.aspx?ProdID=" + prodID);
-        }*/
+            Response.Redirect("ProductDetails.aspx?ProdID=" + prodID);
+
+        }
     }
 }

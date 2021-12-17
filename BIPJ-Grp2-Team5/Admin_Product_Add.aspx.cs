@@ -14,7 +14,7 @@ namespace BIPJ_Grp2_Team5
 
         }
 
-        protected void ProdAdd_Btn_Click(object sender, EventArgs e)
+        /*protected void ProdAdd_Btn_Click(object sender, EventArgs e)
         {
             int result = 0;
             string image = "";
@@ -44,6 +44,6 @@ namespace BIPJ_Grp2_Team5
         protected void ProdBackBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin_Product.aspx");
-        }
+        }*/
     }
 }
