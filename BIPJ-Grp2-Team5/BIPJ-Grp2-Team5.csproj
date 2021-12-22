@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin_Product.aspx" />
+    <Content Include="Admin_ProductDetails.aspx" />
+    <Content Include="Admin_ProductDetails_edit.aspx" />
     <Content Include="Admin_Product_Add.aspx" />
     <Content Include="App_Data\MainDB.mdf" />
     <Content Include="App_Data\MainDB_log.ldf">
@@ -232,6 +234,20 @@
     </Compile>
     <Compile Include="Admin_Product.aspx.designer.cs">
       <DependentUpon>Admin_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ProductDetails.aspx.cs">
+      <DependentUpon>Admin_ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ProductDetails.aspx.designer.cs">
+      <DependentUpon>Admin_ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ProductDetails_edit.aspx.cs">
+      <DependentUpon>Admin_ProductDetails_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ProductDetails_edit.aspx.designer.cs">
+      <DependentUpon>Admin_ProductDetails_edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Product_Add.aspx.cs">
       <DependentUpon>Admin_Product_Add.aspx</DependentUpon>

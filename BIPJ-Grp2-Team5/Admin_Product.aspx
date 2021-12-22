@@ -59,7 +59,7 @@
     <tr>
         <td class="auto-style14"></td>
         <td class="auto-style12">
-            <asp:GridView ID="gvProduct" runat="server" Width="706px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged">
+            <asp:GridView ID="gvProduct" runat="server" Width="706px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" OnRowDeleting="gvProduct_RowDeleting">
                 <Columns>
                     <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Image">
                     </asp:ImageField>
@@ -74,7 +74,6 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:CommandField ShowEditButton="True" />
                     <asp:CommandField ShowDeleteButton="True" />
                 </Columns>
             </asp:GridView>

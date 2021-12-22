@@ -42,10 +42,28 @@ namespace BIPJ_Grp2_Team5
 
             // Redirect to next page, with the Product Id added to the URL,
             // e.g. ProductDetails.aspx?ProdID=1
-            Response.Redirect("ProductDetails.aspx?ProdID=" + prodID);
+            Response.Redirect("Admin_ProductDetails.aspx?ProdID=" + prodID);
 
         }
 
-        
+        protected void gvProduct_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int result = 0;
+            Product prod = new Product();
+            string categoryID = gvProduct.DataKeys[e.RowIndex].Value.ToString();
+            result = prod.ProductDelete(categoryID);
+
+            if (result > 0)
+            {
+                Response.Write("<script>alert('Product Remove successfully');</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('Product Removal NOT successfully');</script>");
+            }
+
+            Response.Redirect("ProductView.aspx");
+
+        }
     }
 }
