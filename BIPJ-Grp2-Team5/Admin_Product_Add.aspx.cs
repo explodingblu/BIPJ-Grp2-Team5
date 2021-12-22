@@ -14,36 +14,35 @@ namespace BIPJ_Grp2_Team5
 
         }
 
-        /*protected void ProdAdd_Btn_Click(object sender, EventArgs e)
+        protected void Btn_AddProdConfirm_Click(object sender, EventArgs e)
         {
             int result = 0;
             string image = "";
 
-            if (ProdImg_FileUpload.HasFile == true)
+            if (fu_ProdImg.HasFile == true)
             {
-                image = "Images\\" + ProdImg_FileUpload.FileName;
+                image = "Images\\" + fu_ProdImg.FileName;
             }
 
-            Product prod = new Product(tb_ProdID.Text, tb_ProdName.Text, decimal.Parse(tb_ProdPrice.Text), tb_ProdDesc.Text, ProdImg_FileUpload.FileName, 0, 0);
+            Product prod = new Product(tb_ProdID.Text, tb_ProdName.Text, decimal.Parse(tb_ProdPrice.Text), tb_ProdDesc.Text, fu_ProdImg.FileName, 0, 0);
             result = prod.ProductInsert();
 
             if (result > 0)
             {
                 string saveimg = Server.MapPath(" ") + "\\" + image;
-                lbl_result.Text = saveimg.ToString();
-                ProdImg_FileUpload.SaveAs(saveimg);
+                lbl_ImgTemp.Text = saveimg.ToString();
+                fu_ProdImg.SaveAs(saveimg);
                 //loadProductInfo();
                 //loadProduct();
                 //clear1();
                 Response.Write("<script>alert('Insert successful');</script>");
             }
             else { Response.Write("<script>alert('Insert NOT successful');</script>"); }
-
         }
 
-        protected void ProdBackBtn_Click(object sender, EventArgs e)
+        protected void Btn_Back_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin_Product.aspx");
-        }*/
+        }
     }
 }

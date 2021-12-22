@@ -61,9 +61,18 @@
         <td class="auto-style12">
             <asp:GridView ID="gvProduct" runat="server" Width="706px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged">
                 <Columns>
+                    <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Image">
+                    </asp:ImageField>
                     <asp:BoundField DataField="Product_ID" HeaderText="ID" />
                     <asp:BoundField DataField="Product_Name" HeaderText="Name" />
                     <asp:BoundField DataField="Product_Price" HeaderText="Price" />
+                    <asp:BoundField DataField="Discount" HeaderText="Discount" />
+                    <asp:BoundField HeaderText="Stock" />
+                    <asp:TemplateField HeaderText="Status">
+                        <ItemTemplate>
+                            <asp:Button ID="btnStatus" runat="server" Text="Select" CommandArgument='<%# Eval("ID") %>' CommandName='<%# Eval("Status") %>' ForeColor='<%# Eval("Status").ToString()=="1"?System.Drawing.Color.Red:System.Drawing.Color.Green %>' OnClick="btnSelect_Click" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:CommandField ShowEditButton="True" />
                     <asp:CommandField ShowDeleteButton="True" />
