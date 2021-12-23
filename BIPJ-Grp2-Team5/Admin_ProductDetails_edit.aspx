@@ -55,7 +55,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr class="auto-style8">
-            <td class="auto-style16" rowspan="6">
+            <td class="auto-style16" rowspan="7">
                 <asp:Image ID="img_result" runat="server" Height="150px" Width="150px" />
             </td>
             <td class="auto-style14">Product ID</td>
@@ -94,10 +94,19 @@
             </td>
         </tr>
         <tr class="auto-style8">
+            <td class="auto-style14">Product Status</td>
+            <td class="auto-style9">
+                <asp:DropDownList ID="DD_Status" runat="server" Height="22px" Width="169px">
+                    <asp:ListItem>In Stock</asp:ListItem>
+                    <asp:ListItem>Not In Stock</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr class="auto-style8">
             <td class="auto-style11">&nbsp;</td>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style9">
-                <asp:Button ID="Btn_EditProdConfirm" runat="server" Text="Edit" Width="100px" OnClick="Btn_AddProdConfirm_Click" />
+                <asp:Button ID="Btn_EditProdConfirm" runat="server" Text="Edit" Width="100px" OnClick="Btn_EditProdConfirm_Click" />
 &nbsp;<asp:Button ID="Btn_Cancel" runat="server" Text="Cancel" Width="100px" OnClick="Btn_Back_Click" />
             </td>
         </tr>

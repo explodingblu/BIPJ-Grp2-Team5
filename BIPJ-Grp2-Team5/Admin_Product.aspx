@@ -45,7 +45,30 @@
             font-size: medium;
         }
     </style>
-    
+    <script>
+        $(function () {
+
+            var jq = $.noConflict();
+            jq(function () {
+                jq('.toggle-two').bootstrapToggle({
+                    Yes: 'Yes',
+                    No: 'No'
+                })
+            })
+            jq(function () {
+                jq('.toggle-two').change(function () {
+                var vbv = jq(this).prop('checked');
+                    alert(vbv);
+                    jq(this).parent().siblings("div").html('Toggle: ' + jq(this).prop('checked'))
+
+
+
+                })
+            })
+
+        })
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
@@ -61,7 +84,7 @@
         <td class="auto-style12">
             <asp:GridView ID="gvProduct" runat="server" Width="706px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" OnRowDeleting="gvProduct_RowDeleting">
                 <Columns>
-                    <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Image">
+                    <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Image" DataImageUrlFormatString="~\images\{0}">
                     </asp:ImageField>
                     <asp:BoundField DataField="Product_ID" HeaderText="ID" />
                     <asp:BoundField DataField="Product_Name" HeaderText="Name" />
@@ -70,7 +93,8 @@
                     <asp:BoundField HeaderText="Stock" />
                     <asp:TemplateField HeaderText="Status">
                         <ItemTemplate>
-                            <asp:Button ID="btnStatus" runat="server" Text="Select" CommandArgument='<%# Eval("ID") %>' CommandName='<%# Eval("Status") %>' ForeColor='<%# Eval("Status").ToString()=="1"?System.Drawing.Color.Red:System.Drawing.Color.Green %>' OnClick="btnSelect_Click" />
+                            <input type="checkbox" data-toggle="toggle" data-style="ios" class="toggle-two"/>
+                            <div id="alertvalue" ></div>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:CommandField ShowSelectButton="True" />

@@ -113,9 +113,9 @@ namespace BIPJ_Grp2_Team5
             if (dr.Read())
             {
                 prod_Name = dr["Product_Name"].ToString();
-                prod_Price = decimal.Parse(dr["Unit_Price"].ToString());
+                prod_Price = decimal.Parse(dr["Product_Price"].ToString());
                 prod_Desc = dr["Product_Desc"].ToString();
-                prod_Image = dr["Product_Image"].ToString();
+                prod_Image = dr["Product_Img"].ToString();
                 discount = decimal.Parse(dr["Discount"].ToString());
                 status = dr["Status"].ToString();
 
@@ -211,9 +211,28 @@ namespace BIPJ_Grp2_Team5
         }//end Delete
 
 
-        //public int ProductUpdate(string pId, string pName, decimal pUnitPrice)
-        //{
+        public int ProductUpdate(string pId, string pName, decimal pPrice, string pDesc, string pImage, string pDiscount, string pStatus)
+        {
+            string queryStr = "UPDATE Products SET" + " Product_Name = @productName, " + " Product_Price = @productPrice, " + " Product_Desc = @productDesc, " + " Product_Img = @productImg, " + " Discount = @discount, " + " Status = @status" + " WHERE Product_ID = @productID";
 
-        //}//end Update
+            SqlConnection conn = new SqlConnection(_connStr);
+            SqlCommand cmd = new SqlCommand(queryStr, conn);
+            cmd.Parameters.AddWithValue("@productID", pId);
+            cmd.Parameters.AddWithValue("@productName", pName);
+            cmd.Parameters.AddWithValue("@productPrice", pPrice);
+            cmd.Parameters.AddWithValue("@productDesc", pDesc);
+            cmd.Parameters.AddWithValue("@productImg", pImage);
+            cmd.Parameters.AddWithValue("@discount", pDiscount);
+            cmd.Parameters.AddWithValue("@status", pStatus);
+
+            conn.Open();
+            int nofRow = 0;
+            nofRow = cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            return nofRow;
+        }//end Update
+
     }
 }

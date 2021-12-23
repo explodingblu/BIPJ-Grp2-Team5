@@ -38,11 +38,11 @@ namespace BIPJ_Grp2_Team5
 
             //Get Product ID from the selected row, which is the
             // first row, i.e. index 0.
-            string prodID = row.Cells[0].Text;
+            string prodID = row.Cells[1].Text;
 
             // Redirect to next page, with the Product Id added to the URL,
             // e.g. ProductDetails.aspx?ProdID=1
-            Response.Redirect("Admin_ProductDetails.aspx?ProdID=" + prodID);
+            Response.Redirect("Admin_ProductDetails.aspx?Product_ID=" + prodID);
 
         }
 

@@ -24,7 +24,7 @@ namespace BIPJ_Grp2_Team5
                 image = "Images\\" + fu_ProdImg.FileName;
             }
 
-            Product prod = new Product(tb_ProdID.Text, tb_ProdName.Text, decimal.Parse(tb_ProdPrice.Text), tb_ProdDesc.Text, fu_ProdImg.FileName, 0, 0);
+            Product prod = new Product(tb_ProdID.Text, tb_ProdName.Text, decimal.Parse(tb_ProdPrice.Text), tb_ProdDesc.Text, fu_ProdImg.FileName, 0, "Not In Stock");
             result = prod.ProductInsert();
 
             if (result > 0)

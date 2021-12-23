@@ -26,5 +26,52 @@ namespace BIPJ_Grp2_Team5
                 lbl_ProdID.Text = prodID.ToString();
             }
         }
+
+        protected void Btn_EditProdConfirm_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                int result = 0;
+                string image = "";
+
+                if (fu_ProdImg.HasFile == true)
+                {
+                    image = "images\\" + fu_ProdImg.FileName;
+                    img_result.ImageUrl = fu_ProdImg.FileName;
+                }
+                else
+                {
+                    image = img_result.ImageUrl;
+                }
+
+                Product Prod = new Product();
+                string datProdID = lbl_ProdID.Text;
+                string datProdName = tb_ProdName.Text;
+                string datProdDesc = tb_ProdDesc.Text;
+                string datProdImg = img_result.ImageUrl;
+                decimal datProdPrice = decimal.Parse(tb_ProdPrice.Text);
+                string datDiscount = tb_ProdDisc.Text;
+                string datstatus = DD_Status.SelectedItem.Text;
+                result = Prod.ProductUpdate(datProdID, datProdName, datProdPrice, datProdDesc, datProdImg, datDiscount, datstatus);
+                if (result > 0)
+                {
+                    string saveimg = Server.MapPath(" ") + "\\" + image;
+                    fu_ProdImg.SaveAs(saveimg);
+                    Response.Write("<script>alert('Update successful');</script>");
+                    Response.Redirect("Admin_ProductDetails.aspx?Product_ID=" + datProdID);
+
+                }
+                else
+                {
+                    Response.Write("<script>alert('Update fail');</script>");
+                }
+            }
+        }
+
+        protected void Btn_Back_Click(object sender, EventArgs e)
+        {
+            string prodID = lbl_ProdID.Text;
+            Response.Redirect("Admin_ProductDetails.aspx?Product_ID=" + prodID);
+        }
     }
 }
