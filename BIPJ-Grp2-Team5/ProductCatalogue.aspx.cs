@@ -23,8 +23,6 @@ namespace BIPJ_Grp2_Team5
             }
             List<Product> prodList = new List<Product>();
             prodList = aProd.getProductAll();// returns a list full of class
-            DL_ProdCat.DataSource = prodList;
-            DL_ProdCat.DataBind();
             /*string mainconn = ConfigurationManager.ConnectionStrings["MainDBContext"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
             string sqlquery = "select * from Products";
@@ -46,6 +44,36 @@ namespace BIPJ_Grp2_Team5
             {
                 theme = DD_Theme.SelectedItem.Text;
             }
+            if (theme == "Name")
+            {
+                if (sortingby == "Ascending")
+                {
+                    prodList.Sort((x, y) => string.Compare(x.Product_Name, y.Product_Name));
+                }
+                else if (sortingby == "Descending")
+                {
+                    prodList.Sort((x, y) => string.Compare(y.Product_Name, x.Product_Name));
+                }
+            }
+            else if(theme == "Price")
+            {
+                if (sortingby == "Ascending")
+                {
+                    prodList.Sort((x, y) => decimal.Compare(x.Product_Price, y.Product_Price));
+                }
+                else if (sortingby == "Descending")
+                {
+                    prodList.Sort((x, y) => decimal.Compare(y.Product_Price, x.Product_Price));
+                }
+            }
+            DL_ProdCat.DataSource = prodList;
+            DL_ProdCat.DataBind();
+        }
+
+        protected void DL_ProdCat_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            Label lbl = (Label)e.Item.FindControl("ProdID");
+            Response.Write(lbl.Text);
         }
     }
 }

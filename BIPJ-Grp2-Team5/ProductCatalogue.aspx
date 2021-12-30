@@ -41,38 +41,45 @@
            <tr>
                <td class="auto-style9">&nbsp;</td>
                <td colspan="3">
-                   <asp:DataList ID="DL_ProdCat" runat="server">
+                   <asp:DataList ID="DL_ProdCat" runat="server" BorderColor="Black" CellPadding="500" CellSpacing="50" GridLines="Both" RepeatColumns="3" RepeatDirection="Horizontal">
                        <ItemTemplate>
                            <table>
                                <tr>
                                    <td>Discount</td>
-                                   <br />
-                                   <td><%#Eval("Discount") %></td>
+                                       <br />
+                                       <td><%#Eval("Discount") %></td>
                                </tr>
                                <tr>
-                                   <td>
-                                       <asp:Image ID="Image1" runat="server" ImageURL='~\\Images\\<%#Eval("Product_Image") %>' Height="150px" Width="150px"></asp:Image>
+                                   <td class="text-center">
+                                       <asp:Image ID="Image1" runat="server" ImageURL='~/images/<%#Eval("Product_Img") %>' Height="150px" Width="150px"></asp:Image>
                                    </td>
                                </tr>
                                <tr>
                                    <td>ID</td>
-                                   <br />
-                                   <td><%#Eval("Product_ID") %></td>
+                                       <br />
+                                       <td>
+                                           <asp:Label ID="ProdID" runat="server" Text='<%#Eval("Product_ID") %>'></asp:Label>
+                                       </td>
                                </tr>
                                <tr>
                                    <td>Name</td>
-                                   <br />
-                                   <td><%#Eval("Product_Name") %></td>
+                                       <br />
+                                       <td><%#Eval("Product_Name") %></td>
                                </tr>
                                <tr>
                                    <td>Price</td>
-                                   <br />
-                                   <td><%#Eval("Product_Price") %></td>
+                                       <br />
+                                       <td><%#Eval("Product_Price") %></td>
                                </tr>
                                <tr>
                                    <td>Status</td>
-                                   <br />
-                                   <td><%#Eval("Status") %></td>
+                                       <br />
+                                       <td><%#Eval("Status") %></td>
+                               </tr>
+                               <tr>
+                                   <asp:Button ID="Btn_View" runat="server" Text="View" />
+                                       <br />
+                                       <asp:Button ID="Btn_AddCart" runat="server" Text="Cart" />
                                </tr>
                            </table>
                        </ItemTemplate>
