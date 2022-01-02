@@ -17,9 +17,9 @@ namespace BIPJ_Grp2_Team5
         string theme = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Load sample data only once, when the page is first loaded.
             if (!IsPostBack)
             {
-                
             }
             List<Product> prodList = new List<Product>();
             prodList = aProd.getProductAll();// returns a list full of class
@@ -68,12 +68,31 @@ namespace BIPJ_Grp2_Team5
             }
             DL_ProdCat.DataSource = prodList;
             DL_ProdCat.DataBind();
-        }
 
-        protected void DL_ProdCat_ItemCommand(object source, DataListCommandEventArgs e)
+            // Manually register the event-handling method for the 
+            // ItemCommand event.
+            DL_ProdCat.ItemCommand +=
+                new DataListCommandEventHandler(this.Item_Command);
+        }
+        void Item_Command(Object sender, DataListCommandEventArgs e)
+        {
+
+            // Set the SelectedIndex property to select an item in the DataList.
+            DL_ProdCat.SelectedIndex = e.Item.ItemIndex;
+
+            // Rebind the data source to the DataList to refresh the control.
+            List<Product> prodList = new List<Product>();
+            prodList = aProd.getProductAll();
+            DL_ProdCat.DataSource = prodList;
+            DL_ProdCat.DataBind();
+
+        }
+        /*protected void DL_ProdCat_ItemCommand(object source, DataListCommandEventArgs e)
         {
             Label lbl = (Label)e.Item.FindControl("ProdID");
             Response.Write(lbl.Text);
-        }
+        }*/
+
+
     }
 }
