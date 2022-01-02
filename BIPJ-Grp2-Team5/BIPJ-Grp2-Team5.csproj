@@ -128,6 +128,7 @@
     <Content Include="Customer_Main.aspx" />
     <Content Include="Customization.aspx" />
     <Content Include="Customization_Accept.aspx" />
+    <Content Include="Education.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -285,6 +286,13 @@
     </Compile>
     <Compile Include="Customization_Accept.aspx.designer.cs">
       <DependentUpon>Customization_Accept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
