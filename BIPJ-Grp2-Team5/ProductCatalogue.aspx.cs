@@ -15,27 +15,18 @@ namespace BIPJ_Grp2_Team5
         Product aProd = new Product();
         string sortingby = null;
         string theme = null;
+        List<Product> prodList = new List<Product>();
         protected void Page_Load(object sender, EventArgs e)
         {
             // Load sample data only once, when the page is first loaded.
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
+                BindData();
             }
-            List<Product> prodList = new List<Product>();
+        }
+        protected void BindData()
+        {
             prodList = aProd.getProductAll();// returns a list full of class
-            /*string mainconn = ConfigurationManager.ConnectionStrings["MainDBContext"].ConnectionString;
-            SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "select * from Products";
-            SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
-            sqlconn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter();
-            sda.SelectCommand = sqlcomm;
-            DataSet ds = new DataSet();
-            sda.Fill(ds);
-            DL_ProdCat.DataSource = ds;
-            DL_ProdCat.DataBind();
-            sqlconn.Close();*/
-
             if (DD_scending.SelectedIndex > -1)
             {
                 sortingby = DD_scending.SelectedItem.Text;
@@ -55,7 +46,7 @@ namespace BIPJ_Grp2_Team5
                     prodList.Sort((x, y) => string.Compare(y.Product_Name, x.Product_Name));
                 }
             }
-            else if(theme == "Price")
+            else if (theme == "Price")
             {
                 if (sortingby == "Ascending")
                 {
@@ -69,30 +60,90 @@ namespace BIPJ_Grp2_Team5
             DL_ProdCat.DataSource = prodList;
             DL_ProdCat.DataBind();
 
-            // Manually register the event-handling method for the 
-            // ItemCommand event.
-            DL_ProdCat.ItemCommand +=
-                new DataListCommandEventHandler(this.Item_Command);
         }
-        void Item_Command(Object sender, DataListCommandEventArgs e)
+        protected void DL_ProdCat_ItemCommand(object source, DataListCommandEventArgs e)
         {
+            if (e.CommandName == "ViewBtn") // check commandname here
+            {
+                int index = e.Item.ItemIndex;
+                Label lbl = (Label)DL_ProdCat.Items[index].FindControl("ProdID");
+                // your code
+                Response.Redirect("Customer_ProductView.aspx?Product_ID=" + lbl.Text);
+            }
+        }
 
-            // Set the SelectedIndex property to select an item in the DataList.
-            DL_ProdCat.SelectedIndex = e.Item.ItemIndex;
-
-            // Rebind the data source to the DataList to refresh the control.
-            List<Product> prodList = new List<Product>();
-            prodList = aProd.getProductAll();
+        protected void DD_scending_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            prodList = aProd.getProductAll();// returns a list full of class
+            if (DD_scending.SelectedIndex > -1)
+            {
+                sortingby = DD_scending.SelectedItem.Text;
+            }
+            if (DD_Theme.SelectedIndex > -1)
+            {
+                theme = DD_Theme.SelectedItem.Text;
+            }
+            if (theme == "Name")
+            {
+                if (sortingby == "Ascending")
+                {
+                    prodList.Sort((x, y) => string.Compare(x.Product_Name, y.Product_Name));
+                }
+                else if (sortingby == "Descending")
+                {
+                    prodList.Sort((x, y) => string.Compare(y.Product_Name, x.Product_Name));
+                }
+            }
+            else if (theme == "Price")
+            {
+                if (sortingby == "Ascending")
+                {
+                    prodList.Sort((x, y) => decimal.Compare(x.Product_Price, y.Product_Price));
+                }
+                else if (sortingby == "Descending")
+                {
+                    prodList.Sort((x, y) => decimal.Compare(y.Product_Price, x.Product_Price));
+                }
+            }
             DL_ProdCat.DataSource = prodList;
             DL_ProdCat.DataBind();
-
         }
-        /*protected void DL_ProdCat_ItemCommand(object source, DataListCommandEventArgs e)
+
+        protected void DD_Theme_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Label lbl = (Label)e.Item.FindControl("ProdID");
-            Response.Write(lbl.Text);
-        }*/
-
-
+            prodList = aProd.getProductAll();// returns a list full of class
+            if (DD_scending.SelectedIndex > -1)
+            {
+                sortingby = DD_scending.SelectedItem.Text;
+            }
+            if (DD_Theme.SelectedIndex > -1)
+            {
+                theme = DD_Theme.SelectedItem.Text;
+            }
+            if (theme == "Name")
+            {
+                if (sortingby == "Ascending")
+                {
+                    prodList.Sort((x, y) => string.Compare(x.Product_Name, y.Product_Name));
+                }
+                else if (sortingby == "Descending")
+                {
+                    prodList.Sort((x, y) => string.Compare(y.Product_Name, x.Product_Name));
+                }
+            }
+            else if (theme == "Price")
+            {
+                if (sortingby == "Ascending")
+                {
+                    prodList.Sort((x, y) => decimal.Compare(x.Product_Price, y.Product_Price));
+                }
+                else if (sortingby == "Descending")
+                {
+                    prodList.Sort((x, y) => decimal.Compare(y.Product_Price, x.Product_Price));
+                }
+            }
+            DL_ProdCat.DataSource = prodList;
+            DL_ProdCat.DataBind();
+        }
     }
 }

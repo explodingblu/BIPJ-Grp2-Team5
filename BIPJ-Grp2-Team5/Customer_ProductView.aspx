@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_Navbar.Master" AutoEventWireup="true" CodeBehind="Admin_ProductDetails.aspx.cs" Inherits="BIPJ_Grp2_Team5.Admin_ProductDetails" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer_Navbar.Master" AutoEventWireup="true" CodeBehind="Customer_ProductView.aspx.cs" Inherits="BIPJ_Grp2_Team5.Customer_ProductView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <style type="text/css">
+    <style type="text/css">
         .auto-style5 {
             width: 100%;
             height: 414px;
@@ -32,23 +32,23 @@
             width: 455px;
             text-align: center;
         }
-            .auto-style19 {
-                font-size: medium;
-                width: 217px;
-            }
-            .auto-style20 {
-                font-size: medium;
-                text-align: right;
-            }
+        .auto-style19 {
+            font-size: medium;
+            width: 217px;
+        }
+        .auto-style20 {
+            font-size: medium;
+            text-align: right;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <form id="form1" runat="server">
+    <form id="form1" runat="server">
 
     <table class="auto-style5">
         <tr>
             <td class="auto-style10">&nbsp;</td>
-            <td colspan="2"><h1 class="auto-style7"><strong>Product Add</strong></h1></td>
+            <td colspan="2"><h1 class="auto-style7"><strong>Product View</strong></h1></td>
             <td>&nbsp;</td>
         </tr>
         <tr class="auto-style8">
@@ -79,7 +79,7 @@
                 &nbsp;</td>
         </tr>
         <tr class="auto-style8">
-            <td class="auto-style19">Product Price (SGD)</td>
+            <td class="auto-style19">Product Price ($)</td>
             <td class="auto-style14">
                 <asp:Label ID="lbl_prodPrice" runat="server" Text="Label"></asp:Label>
             </td>
@@ -98,8 +98,10 @@
             <td class="auto-style11">&nbsp;</td>
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style20">
-                <asp:Button ID="Btn_Edit" runat="server" Text="Edit" Width="100px" OnClick="Btn_Edit_Click" />
-&nbsp; <asp:Button ID="Btn_Back" runat="server" Text="Cancel" Width="100px" OnClick="Btn_Back_Click" />
+                <asp:Button ID="Btn_Buy" runat="server" Text="Buy" Width="100px" OnClick="Btn_Buy_Click" />
+                &nbsp;
+                <asp:Button ID="Btn_Edit" runat="server" Text="Customize" Width="100px" OnClick="Btn_Edit_Click" />
+&nbsp; <asp:Button ID="Btn_Back" runat="server" Text="Back" Width="100px" OnClick="Btn_Back_Click" />
                 &nbsp;</td>
             <td class="auto-style9">
                 &nbsp;</td>

@@ -10,10 +10,10 @@
         }
         .auto-style11 {
             text-align: right;
-            width: 1171px;
+            width: 1039px;
         }
         .auto-style12 {
-            width: 1171px;
+            width: 1039px;
         }
         </style>
 </asp:Content>
@@ -24,13 +24,13 @@
                <td class="auto-style10" colspan="3"><h1>Product Catalogue</h1></td>
            </tr>
            <tr>
-               <td class="auto-style9"><asp:Label ID="TempLabel" runat="server" Text="Label"></asp:Label></td>
+               <td class="auto-style9">&nbsp;</td>
                <td class="auto-style11">Sort By:
-                   <asp:DropDownList ID="DD_scending" runat="server" AutoPostBack="True">
+                   <asp:DropDownList ID="DD_scending" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DD_scending_SelectedIndexChanged">
                        <asp:ListItem>Ascending</asp:ListItem>
                        <asp:ListItem>Descending</asp:ListItem>
                    </asp:DropDownList>
-                   <asp:DropDownList ID="DD_Theme" runat="server" AutoPostBack="True">
+                   <asp:DropDownList ID="DD_Theme" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DD_Theme_SelectedIndexChanged">
                        <asp:ListItem>Name</asp:ListItem>
                        <asp:ListItem>Price</asp:ListItem>
                    </asp:DropDownList>
@@ -41,7 +41,7 @@
                <td>
                    &nbsp;</td>
                <td class="auto-style12">
-                   <asp:DataList ID="DL_ProdCat" runat="server" BorderColor="Black" CellPadding="500" CellSpacing="50" GridLines="Both" RepeatColumns="3" RepeatDirection="Horizontal"><!-- DataKeyField="Id" OnItemCommand="DL_ProdCat_ItemCommand" -->
+                   <asp:DataList ID="DL_ProdCat" runat="server" BorderColor="Black" CellPadding="1000" CellSpacing="100" GridLines="Both" RepeatColumns="3" RepeatDirection="Horizontal" onitemcommand="DL_ProdCat_ItemCommand"> 
                        <ItemTemplate>
                            <table>
                                <tr>
@@ -50,7 +50,7 @@
                                </tr>
                                <tr>
                                    <td colspan="2">
-                                       <asp:Image ID="Image1" runat="server" ImageURL='~/images/<%#Eval("Product_Img") %>' Height="150px" Width="150px"></asp:Image>
+                                       <asp:Image ID="Image1" runat="server" ImageURL= <%# "~/images/" + Eval("Product_Image") %> Height="150px" Width="150px"></asp:Image>
                                    </td>
                                </tr>
                                <tr>
@@ -81,6 +81,7 @@
                                </tr>
                            </table>
                        </ItemTemplate>
+                       <SeparatorStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Larger" Font-Strikeout="False" Font-Underline="False" />
                    </asp:DataList>
                </td>
                <td>
