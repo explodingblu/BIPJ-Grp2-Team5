@@ -4,113 +4,427 @@
 
 <html>
 <head runat="server">
-    <title>JexTech | Admin Panel</title>
-    <asp:ContentPlaceHolder ID="head" runat="server">   
-
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<!-- VENDOR CSS -->
-	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendor/linearicons/style.css">
-	<link rel="stylesheet" href="vendor/chartist/css/chartist-custom.css">
-	<!-- MAIN CSS -->
-	<link rel="stylesheet" href="css/admincss/css/main.css">
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!--Fontawesom-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styled.css" />
+    <title>Smooth Collapsible Sidebar Navigation Example</title>
+    <style>
+        :root {
+  --white-color: #fafafb;
+  --background-color: #17171e;
+  --grey-color: #b5b5be;
+  --dark-grey-color: #292932;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  color: var(--white-color);
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.lead { font-size: 1.5rem; font-weight: 300; }
+.container { margin: 150px auto; max-width: 960px; color: #000; }
+
+.side-bar {
+  width: 23.2rem;
+  height: 100%;
+  padding: 2.1rem 1.2rem;
+  background-color: #17171e;
+  position: fixed;
+  transition: all 0.5s ease;
+  top: 0;
+}
+
+.logo-name-wrapper {
+  position: relative;
+  margin-bottom: 2.1rem;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+
+.logo-name__name {
+  margin-left: 0.9rem;
+  white-space: nowrap;
+}
+.logo-name__button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 1.8rem;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.logo-name__icon {
+  font-size: 1.8rem;
+  color: var(--grey-color);
+}
+
+.message {
+  background-color: var(--dark-grey-color);
+  display: flex;
+  align-items: center;
+  padding: 1.55rem 0 1.55rem 1.2rem;
+  border-radius: 0.4rem;
+  margin-bottom: 3.6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.message-icon {
+  font-size: 2rem;
+  transform: translateX(3rem);
+  transition: all 0.5s ease;
+}
+
+.message-text {
+  margin-left: 1.1rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  transform: translateX(3rem);
+  transition: all 0.5s ease;
+}
+
+.features-list {
+  padding-left: 0px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #292932;
+  list-style: none;
+}
+
+.features-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0.9rem;
+  margin-bottom: 1.1rem;
+  color: var(--grey-color);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.features-item a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.1rem;
+  color: var(--grey-color);
+  cursor: pointer;
+  transition: 0.5s ease;
+  text-decoration:none;
+}
+
+.features-item a:hover {
+  color: var(--white-color);
+  transition: 0.5s ease;
+}
+
+.features-item::before {
+  transition: 0.5s ease;
+  content: '';
+  position: absolute;
+  left: -1.2rem;
+  height: 100%;
+  border-left: 3px solid var(--white-color);
+  border-radius: 2px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.features-item:hover {
+  color: var(--white-color);
+  transition: 0.5s ease;
+}
+
+.features-item:hover::before {
+  opacity: 1;
+  visibility: unset;
+}
+
+.features-item-icon {
+  font-size: 2rem;
+}
+
+i {
+  font-size: 2rem;
+}
+
+.features-item-text {
+  margin-left: 1.5rem;
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}
+
+.inbox-number {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #1e75ff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.4rem;
+  color: var(--white-color);
+  opacity: 1;
+  transition: 0.6s linear;
+}
+
+.inbox-icon {
+  position: relative;
+}
+
+.inbox-icon .status {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  background-color: #1e75ff;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  opacity: 0;
+  transition: 0.6s linear;
+}
+
+.category-list {
+  padding-top: 2.1rem;
+  padding-bottom: 0.9rem;
+  color: var(--grey-color);
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-bottom: 1px solid #292932;
+}
+
+.category-header {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+  color: var(--white-color);
+  margin-bottom: 1.3rem;
+  white-space: nowrap;
+}
+
+.category-item {
+  position: relative;
+  padding: 0.9rem 1.1rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.category-item-status {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  display: inline-block;
+}
+.category-item-text {
+  margin-left: 1rem;
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}
+
+.category-item-number {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
 
 
+.tooltip {
+  position: absolute;
+  top: -2.1rem;
+  left: 6.4rem;
+  background-color: white;
+  color: var(--background-color);
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 1.4rem;
+  transition: 0s;
+  opacity: 0;
+  display: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.side-bar.collapse .message:hover .tooltip,
+.features-item:hover .tooltip,
+.category-item:hover .tooltip,
+.chat-new-btn:hover .tooltip {
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+.side-bar.collapse {
+  width: 6.4rem;
+}
+
+.side-bar.collapse .tooltip {
+  display: block;
+}
+
+.side-bar.collapse .logo-name,
+.side-bar.collapse .category-header,
+.side-bar.collapse .chat-header,
+.side-bar.collapse .chat-new-btn-text,
+.side-bar.collapse .features-item-text,
+.side-bar.collapse .inbox-number,
+.side-bar.collapse .category-item-text,
+.side-bar.collapse .category-item-number,
+.side-bar.collapse .message-text,
+.side-bar.collapse .chat-item-name,
+.side-bar.collapse .chat-item-number,
+.side-bar.collapse .chat-item-status {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.side-bar.collapse .message-text {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(0);
+}
+.side-bar.collapse .message-icon {
+  transform: translateX(0);
+}
+.side-bar.collapse .logo-name__button {
+  right: 0.5rem;
+}
+
+.side-bar.collapse .inbox-icon .status,
+.side-bar.collapse .chat-item-avatar-wrapper::before {
+  opacity: 1;
+}
+
+    </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-	<!-- WRAPPER -->
-	<div id="wrapper">
-	<div id = "mainheader">
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="brand">
-				<a href="Adminindex.aspx"><class="img-responsive logo">EcoVerse Singapore</a>
-			</div>
-			<div class="container-fluid">
-				<div class="navbar-btn">
-					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
-				</div>
-				<div id="navbar-menu">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-								<i class="lnr lnr-alarm"></i>
-								<span class="badge bg-danger">5</span>
-							</a>
-							<ul class="dropdown-menu notifications">
-								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
-								<li><a href="#"  class="more">See all notifications</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user">
-                            <asp:Label ID="lbl_AdminName" runat="server" ></asp:Label>
-                            </i>  </a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		
-		<!-- END NAVBAR -->
-		<!-- LEFT SIDEBAR -->
-		<div id="sidebar-nav" class="sidebar">
-			<div class="sidebar-scroll">
-				<nav>
-					<ul class="nav">
-						<li><a href="Admin_Index.aspx" runat="server" id="tabadminindex"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
-						<li><a href="AdminUser.aspx" runat="server" id="tabadminuser"><i class="fa fa-users"></i> <span>Users</span></a></li>
-						<li><a href="Admin_Product.aspx" runat="server"  id="tabadminproduct"><i class="fa fa-archive"></i>Products</a></li>
-						<li><a href="Admin_Orders.aspx" runat="server" id="tabadminorders"><i class="fa fa-paper-plane-o"></i>Orders</a></li>
-						<li><a href="Admin_Delivery.aspx" runat="server" id="tabadmindelivery"><i class="fa fa-truck"></i>Delivery</a></li>
-						<li><a href="Admin_Manufacturing.aspx" runat="server" id="tabadminmanufacturing"><i class="fa fa-envelope"></i>Manfacturing</a></li>
-						<li><a href="AdminContactus.aspx" runat="server" id="tabcontactus"><i class="fa fa-address-book"></i> <span>Contactus</span></a></li>
-<%--						<li><a href="#" runat="server" id="tablogout"><i class="lnr lnr-exit"></i> <span><asp:Button ID="btn_logout" runat="server" OnClick="btn_logout_Click" Text="logout" BackColor="Red" BorderStyle="Solid" CssClass="tab-content" CausesValidation="False"/>--%>
-                            </span></a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-		<!-- END LEFT SIDEBAR -->
-		<!-- MAIN -->
-			<div>
-				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-				
-				</asp:ContentPlaceHolder>
-			</div>
-		<!-- END MAIN -->
-		<div class="clearfix"></div>
-		<footer>
-			<div class="container-fluid">
-				<p class="copyright">&copy; 2021 <a href="https://www.themeineed.com" target="_blank">Admin Page</a>. EcoVerse.</p>
-			</div>
-		</footer>
-	</div>
-	<!-- END WRAPPER -->
+    <div class="side-bar">
+      <div class="logo-name-wrapper">
+        <div class="logo-name">
+          <img src="./assets/images/logo.png" class="logo" alt="logo app" srcset=""/>
+          <span class="logo-name__name">CSSScript</span>
+        </div>
+        <button class="logo-name__button">
+          <i
+            class="bx bx-arrow-from-right logo-name__icon"
+            id="logo-name__icon"
+          ></i>
+        </button>
+        <!-- <i class='bx bx-arrow-from-left'></i> -->
+      </div>
 
+      <div class="message">
+        <i class="message-icon bx bx-message-square-edit"></i>
+        <span class="message-text">New Mesage</span>
+        <span class="tooltip">New Mesage</span>
+      </div>
 
+      <ul class="features-list">
+        <li class="features-item inbox active">
+          <i class="bx bxs-inbox features-item-icon inbox-icon"
+            ><span class="status"></span
+          ></i>
+          <span class="features-item-text">Inbox</span>
+          <span class="inbox-number">99</span>
+          <span class="tooltip">Inbox</span>
+        </li>
 
-        
+        <li class="features-item draft" >
+            <a href="Admin_Product.aspx">
+              <i class='bx bxs-package'></i>
+              <span class="features-item-text">Product</span>
+              <span class="tooltip">Product</span>
+            </a>
+        </li>
 
+        <li class="features-item star">
+          <i class="bx bx-star features-item-icon"></i>
+          <span class="features-item-text">Starred</span>
+          <span class="tooltip">Starred</span>
+        </li>
+        <li class="features-item sent">
+          <i class="fas fa-box"></i>
+          <span class="features-item-text">Sent</span>
+          <span class="tooltip">Sent</span>
+        </li>
+        <li class="features-item trash">
+          <i class="bx bx-trash features-item-icon"></i>
+          <span class="features-item-text">Trash</span>
+          <span class="tooltip">Trash</span>
+        </li>
+        <li class="features-item spam">
+          <i class="bx bx-message-square-error features-item-icon"></i>
+          <span class="features-item-text">Spam</span>
+          <span class="tooltip">Spam</span>
+        </li>
+      </ul>
 
-
-    </form>
-	<!-- Javascript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-	<script src="vendor/chartist/js/chartist.min.js"></script>
-	<script src="scripts/klorofil-common.js"></script>
+    </div>
+    <div class="container">
+        <div style="margin:30px auto">
+            <div id="carbon-block">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+       </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- CSSScript Demo Page -->
+<!-- <ins class="auto-style2"
+     style="display:inline-block;"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="3025259193"></ins>-->
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+    <script type="text/javascript">
+      {
+        let sideBar = document.querySelector('.side-bar');
+        let arrowCollapse = document.querySelector('#logo-name__icon');
+        sideBar.onclick = () => {
+          sideBar.classList.toggle('collapse');
+          arrowCollapse.classList.toggle('collapse');
+          if (arrowCollapse.classList.contains('collapse')) {
+            arrowCollapse.classList =
+              'bx bx-arrow-from-left logo-name__icon collapse';
+          } else {
+            arrowCollapse.classList = 'bx bx-arrow-from-right logo-name__icon';
+          }
+        };
+      }
+    </script>
 </body>
 </html>
