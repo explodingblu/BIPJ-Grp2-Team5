@@ -20,7 +20,7 @@ namespace BIPJ_Grp2_Team5
                 lbl_prodName.Text = prod.Product_Name;
                 lbl_prodDesc.Text = prod.Product_Desc;
                 lbl_prodPrice.Text = prod.Product_Price.ToString("c");
-                lbl_Discount.Text = prod.Discount.ToString("c");
+                lbl_Discount.Text = prod.Discount.ToString();
                 img_prodImg.ImageUrl = "~\\images\\" + prod.Product_Image;
 
                 lbl_prodID.Text = prodID.ToString();

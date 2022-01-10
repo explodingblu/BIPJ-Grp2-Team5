@@ -79,7 +79,7 @@
                 &nbsp;</td>
         </tr>
         <tr class="auto-style8">
-            <td class="auto-style19">Product Price ($)</td>
+            <td class="auto-style19">Product Price (SGD)</td>
             <td class="auto-style14">
                 <asp:Label ID="lbl_prodPrice" runat="server" Text="Label"></asp:Label>
             </td>

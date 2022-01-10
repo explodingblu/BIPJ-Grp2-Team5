@@ -126,6 +126,7 @@
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
     <Content Include="Customer_Main.aspx" />
+    <Content Include="Customer_ProductView.aspx" />
     <Content Include="Customization.aspx" />
     <Content Include="Customization_Accept.aspx" />
     <Content Include="Education.aspx" />
@@ -272,6 +273,13 @@
     </Compile>
     <Compile Include="Customer_Navbar.Master.designer.cs">
       <DependentUpon>Customer_Navbar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_ProductView.aspx.cs">
+      <DependentUpon>Customer_ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_ProductView.aspx.designer.cs">
+      <DependentUpon>Customer_ProductView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customization.aspx.cs">
       <DependentUpon>Customization.aspx</DependentUpon>
