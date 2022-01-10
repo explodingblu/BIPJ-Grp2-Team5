@@ -11,106 +11,142 @@ namespace BIPJ_Grp2_Team5
 {
 
 
-    public partial class Admin_Navbar
+    public partial class Admin_Index
     {
 
         /// <summary>
-        /// head control.
+        /// totalmembers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalmembers;
 
         /// <summary>
-        /// form1 control.
+        /// lbl_UserCounts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lbl_UserCounts;
 
         /// <summary>
-        /// lbl_AdminName control.
+        /// lbl_ProductCounts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_AdminName;
+        protected global::System.Web.UI.WebControls.Label lbl_ProductCounts;
 
         /// <summary>
-        /// tabadminindex control.
+        /// lbl_OrdersCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabadminindex;
+        protected global::System.Web.UI.WebControls.Label lbl_OrdersCount;
 
         /// <summary>
-        /// tabadminuser control.
+        /// lbl_RepairCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabadminuser;
+        protected global::System.Web.UI.WebControls.Label lbl_RepairCount;
 
         /// <summary>
-        /// tabadminproduct control.
+        /// lbl_EconsultCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabadminproduct;
+        protected global::System.Web.UI.WebControls.Label lbl_EconsultCount;
 
         /// <summary>
-        /// tabadminorders control.
+        /// lbl_ContactusCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabadminorders;
+        protected global::System.Web.UI.WebControls.Label lbl_ContactusCount;
 
         /// <summary>
-        /// tabadmindelivery control.
+        /// lbl_NotificationsCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabadmindelivery;
+        protected global::System.Web.UI.WebControls.Label lbl_NotificationsCount;
 
         /// <summary>
-        /// tabadminmanufacturing control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabadminmanufacturing;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// tabcontactus control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabcontactus;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// lbl_StockLevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label lbl_StockLevel;
+
+        /// <summary>
+        /// lbl_Phonecount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Phonecount;
+
+        /// <summary>
+        /// lbl_Keyboardcount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Keyboardcount;
+
+        /// <summary>
+        /// lbl_Mousecount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Mousecount;
+
+        /// <summary>
+        /// lbl_Headsetcoun control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Headsetcoun;
     }
 }
