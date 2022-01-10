@@ -372,6 +372,13 @@ i {
             </a>
         </li>
 
+        <li class="features-item draft" >
+            <a href="Admin_Education.aspx">
+              <i class='bx bxs-package'></i>
+              <span class="features-item-text">Education</span>
+              <span class="tooltip">Education</span>
+            </a>
+        </li>
         <li class="features-item star">
           <i class="bx bx-star features-item-icon"></i>
           <span class="features-item-text">Starred</span>
