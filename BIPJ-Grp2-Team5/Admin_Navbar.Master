@@ -22,7 +22,6 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<div id = "mainheader">
@@ -73,7 +72,6 @@
 						<li><a href="Admin_Orders.aspx" runat="server" id="tabadminorders"><i class="fa fa-paper-plane-o"></i>Orders</a></li>
 						<li><a href="Admin_Delivery.aspx" runat="server" id="tabadmindelivery"><i class="fa fa-truck"></i>Delivery</a></li>
 						<li><a href="Admin_Manufacturing.aspx" runat="server" id="tabadminmanufacturing"><i class="fa fa-envelope"></i>Manfacturing</a></li>
-												<li><a href="Admin_Education.aspx" runat="server" id="A1"><i class="fa fa-envelope"></i>Education</a></li>
 						<li><a href="AdminContactus.aspx" runat="server" id="tabcontactus"><i class="fa fa-address-book"></i> <span>Contactus</span></a></li>
 <%--						<li><a href="#" runat="server" id="tablogout"><i class="lnr lnr-exit"></i> <span><asp:Button ID="btn_logout" runat="server" OnClick="btn_logout_Click" Text="logout" BackColor="Red" BorderStyle="Solid" CssClass="tab-content" CausesValidation="False"/>--%>
                             </span></a></li>
@@ -105,7 +103,7 @@
 
 
 
-    </form>
+  
 	<!-- Javascript -->
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
