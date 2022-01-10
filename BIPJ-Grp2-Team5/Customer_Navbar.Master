@@ -97,7 +97,7 @@
                                     <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
                                     <li><a href="#welcome">about</a></li>
                                     <li><a href="ProductCatalogue.aspx">Shop</a></li>
-                                    <li><a href="#counter">achivment</a></li>
+                                    <li><a href="Education.aspx">Education</a></li>
                                     <li><a href="#event">event</a></li>
                                     <li><a href="#testimonial">testimonial</a></li>
                                     <li><a href="#blog">blog</a></li>
