@@ -129,7 +129,6 @@
     <Content Include="Customer_ProductView.aspx" />
     <Content Include="Customization.aspx" />
     <Content Include="Customization_Accept.aspx" />
-    <Content Include="Education.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -149,6 +148,9 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Education.aspx" />
+    <Content Include="Admin_Education.aspx" />
+    <Content Include="Admin_Education_Add.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
     <Content Include="img\air_pollutuon.jpg" />
@@ -260,6 +262,7 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Education.cs" />
     <Compile Include="Customer_Main.aspx.cs">
       <DependentUpon>Customer_Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,13 +298,6 @@
     <Compile Include="Customization_Accept.aspx.designer.cs">
       <DependentUpon>Customization_Accept.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Education.aspx.cs">
-      <DependentUpon>Education.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Education.aspx.designer.cs">
-      <DependentUpon>Education.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -320,6 +316,27 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Education.aspx.cs">
+      <DependentUpon>Admin_Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Education.aspx.designer.cs">
+      <DependentUpon>Admin_Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Education_Add.aspx.cs">
+      <DependentUpon>Admin_Education_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Education_Add.aspx.designer.cs">
+      <DependentUpon>Admin_Education_Add.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
