@@ -105,6 +105,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin_Delivery.aspx" />
+    <Content Include="Admin_Index.aspx" />
+    <Content Include="Admin_Manufacturing.aspx" />
+    <Content Include="Admin_Orders.aspx" />
     <Content Include="Admin_Product.aspx" />
     <Content Include="Admin_ProductDetails.aspx" />
     <Content Include="Admin_ProductDetails_edit.aspx" />
@@ -118,6 +122,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\admincss\css\bootstrap.css" />
+    <Content Include="css\admincss\css\bootstrap.min.css" />
+    <Content Include="css\admincss\css\demo.css" />
+    <Content Include="css\admincss\css\main.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\carousel.css" />
@@ -129,7 +137,6 @@
     <Content Include="Customer_ProductView.aspx" />
     <Content Include="Customization.aspx" />
     <Content Include="Customization_Accept.aspx" />
-    <Content Include="Education.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -149,6 +156,15 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Education.aspx" />
+    <Content Include="Admin_Education.aspx" />
+    <Content Include="css\admincss\css\demo.css.map" />
+    <Content Include="css\admincss\css\main.css.map" />
+    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.CopyComplete" />
+    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\BIPJ-Grp2-Team5.csproj.AssemblyReference.cache" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
     <Content Include="img\air_pollutuon.jpg" />
@@ -189,6 +205,9 @@
     <Content Include="js\main.js" />
     <Content Include="js\waypoints.min.js" />
     <Content Include="js\wow.min.js" />
+    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\BIPJ-Grp2-Team5.dll" />
+    <Content Include="obj\Debug\BIPJ-Grp2-Team5.pdb" />
     <Content Include="ProductCatalogue.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -218,17 +237,77 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="vendor\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\bootstrap\js\npm.js" />
+    <Content Include="vendor\chartist\css\chartist-custom.css" />
+    <Content Include="vendor\chartist\css\chartist.css" />
+    <Content Include="vendor\chartist\css\chartist.min.css" />
+    <Content Include="vendor\chartist\js\chartist.js" />
+    <Content Include="vendor\chartist\js\chartist.min.js" />
+    <Content Include="vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="vendor\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="vendor\jquery.easy-pie-chart\angular.easypiechart.js" />
+    <Content Include="vendor\jquery.easy-pie-chart\angular.easypiechart.min.js" />
+    <Content Include="vendor\jquery.easy-pie-chart\easypiechart.js" />
+    <Content Include="vendor\jquery.easy-pie-chart\easypiechart.min.js" />
+    <Content Include="vendor\jquery.easy-pie-chart\jquery.easypiechart.js" />
+    <Content Include="vendor\jquery.easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="vendor\linearicons\style.css" />
+    <Content Include="vendor\toastr\toastr.css" />
+    <Content Include="vendor\toastr\toastr.js" />
+    <Content Include="vendor\toastr\toastr.min.css" />
+    <Content Include="vendor\toastr\toastr.min.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Delivery.aspx.cs">
+      <DependentUpon>Admin_Delivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Delivery.aspx.designer.cs">
+      <DependentUpon>Admin_Delivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Index.aspx.cs">
+      <DependentUpon>Admin_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Index.aspx.designer.cs">
+      <DependentUpon>Admin_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Manufacturing.aspx.cs">
+      <DependentUpon>Admin_Manufacturing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Manufacturing.aspx.designer.cs">
+      <DependentUpon>Admin_Manufacturing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Navbar.Master.cs">
       <DependentUpon>Admin_Navbar.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin_Navbar.Master.designer.cs">
       <DependentUpon>Admin_Navbar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Orders.aspx.cs">
+      <DependentUpon>Admin_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Orders.aspx.designer.cs">
+      <DependentUpon>Admin_Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Product.aspx.cs">
       <DependentUpon>Admin_Product.aspx</DependentUpon>
@@ -295,16 +374,11 @@
     <Compile Include="Customization_Accept.aspx.designer.cs">
       <DependentUpon>Customization_Accept.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Education.aspx.cs">
-      <DependentUpon>Education.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Education.aspx.designer.cs">
-      <DependentUpon>Education.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductCatalogue.aspx.cs">
       <DependentUpon>ProductCatalogue.aspx</DependentUpon>
@@ -321,12 +395,46 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Education.aspx.cs">
+      <DependentUpon>Admin_Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Education.aspx.designer.cs">
+      <DependentUpon>Admin_Education.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="vendor\chartist\css\chartist-custom.css.map" />
+    <Content Include="vendor\chartist\map\chartist.css.map" />
+    <Content Include="vendor\chartist\map\chartist.min.js.map" />
+    <Content Include="vendor\chartist\scss\chartist.scss" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="vendor\jquery\jquery.min.map" />
+    <Content Include="vendor\linearicons\fonts\Linearicons-Free.eot" />
+    <Content Include="vendor\linearicons\fonts\Linearicons-Free.ttf" />
+    <Content Include="vendor\linearicons\fonts\Linearicons-Free.woff" />
+    <Content Include="vendor\linearicons\fonts\Linearicons-Free.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

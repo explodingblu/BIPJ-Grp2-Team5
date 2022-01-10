@@ -10,7 +10,7 @@
 
 namespace BIPJ_Grp2_Team5
 {
-    public partial class WebForm1
+    public partial class WebForm2
     {
     }
 }
