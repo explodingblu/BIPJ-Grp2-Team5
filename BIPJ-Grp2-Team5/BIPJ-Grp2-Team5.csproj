@@ -160,11 +160,6 @@
     <Content Include="Admin_Education.aspx" />
     <Content Include="css\admincss\css\demo.css.map" />
     <Content Include="css\admincss\css\main.css.map" />
-    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.AssemblyReference.cache" />
-    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.CopyComplete" />
-    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Release\BIPJ-Grp2-Team5.csproj.AssemblyReference.cache" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
     <Content Include="img\air_pollutuon.jpg" />
@@ -205,9 +200,6 @@
     <Content Include="js\main.js" />
     <Content Include="js\waypoints.min.js" />
     <Content Include="js\wow.min.js" />
-    <Content Include="obj\Debug\BIPJ-Grp2-Team5.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\BIPJ-Grp2-Team5.dll" />
-    <Content Include="obj\Debug\BIPJ-Grp2-Team5.pdb" />
     <Content Include="ProductCatalogue.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -377,8 +369,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductCatalogue.aspx.cs">
       <DependentUpon>ProductCatalogue.aspx</DependentUpon>
@@ -410,9 +400,7 @@
       <DependentUpon>Admin_Education.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
