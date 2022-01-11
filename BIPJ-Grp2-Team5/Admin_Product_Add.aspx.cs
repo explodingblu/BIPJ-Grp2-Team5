@@ -36,6 +36,7 @@ namespace BIPJ_Grp2_Team5
                 //loadProduct();
                 //clear1();
                 Response.Write("<script>alert('Insert successful');</script>");
+                Response.Redirect("Admin_Product.aspx");
             }
             else { Response.Write("<script>alert('Insert NOT successful');</script>"); }
         }

@@ -82,9 +82,10 @@
     <tr>
         <td class="auto-style14"></td>
         <td class="auto-style12">
-            <asp:GridView ID="gvProduct" runat="server" Width="706px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" OnRowDeleting="gvProduct_RowDeleting">
+            <asp:GridView ID="gvProduct" runat="server" Width="706px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" OnRowDeleting="gvProduct_RowDeleting" DataKeyNames="Product_ID">
                 <Columns>
                     <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Image" DataImageUrlFormatString="~\images\{0}" ControlStyle-Width="100" ControlStyle-Height = "100">
+                        <ControlStyle Height="100px" Width="100px" />
                     </asp:ImageField>
                     <asp:BoundField DataField="Product_ID" HeaderText="ID" />
                     <asp:BoundField DataField="Product_Name" HeaderText="Name" />

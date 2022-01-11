@@ -15,6 +15,10 @@
         .auto-style12 {
             width: 1039px;
         }
+        .RowSeparator
+        {
+            margin-right: 250px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -41,7 +45,7 @@
                <td>
                    &nbsp;</td>
                <td class="auto-style12">
-                   <asp:DataList ID="DL_ProdCat" runat="server" BorderColor="Black" CellPadding="1000" CellSpacing="100" GridLines="Both" RepeatColumns="3" RepeatDirection="Horizontal" onitemcommand="DL_ProdCat_ItemCommand"> 
+                   <asp:DataList ID="DL_ProdCat" runat="server" BorderColor="Black" CellPadding="1000" CellSpacing="100" RepeatColumns="3" RepeatDirection="Horizontal" onitemcommand="DL_ProdCat_ItemCommand"> 
                        <ItemTemplate>
                            <table>
                                <tr>
@@ -81,6 +85,9 @@
                                </tr>
                            </table>
                        </ItemTemplate>
+                       <SeparatorTemplate>
+                           <h4 class="RowSeparator"></h4>
+                       </SeparatorTemplate>
                        <SeparatorStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Larger" Font-Strikeout="False" Font-Underline="False" />
                    </asp:DataList>
                </td>

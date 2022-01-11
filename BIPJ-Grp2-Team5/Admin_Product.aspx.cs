@@ -62,7 +62,7 @@ namespace BIPJ_Grp2_Team5
                 Response.Write("<script>alert('Product Removal NOT successfully');</script>");
             }
 
-            Response.Redirect("ProductView.aspx");
+            Response.Redirect("Admin_Product.aspx");
 
         }
     }
