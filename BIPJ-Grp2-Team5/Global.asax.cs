@@ -17,5 +17,11 @@ namespace BIPJ_Grp2_Team5
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+        static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute("DynamicPage", "Education/{PageName}.aspx", "~/DynamicPage.aspx");
+        }
     }
+
+
 }
