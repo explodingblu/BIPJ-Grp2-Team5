@@ -31,8 +31,7 @@
     .auto-style12 {
         width: 765px;
         height: 193px;
-        text-align: center;
-    }
+        }
     .auto-style13 {
         height: 193px;
     }
