@@ -22,6 +22,109 @@
 
 </head>
 <body>
+<<<<<<<<< Temporary merge branch 1
+    <div class="side-bar">
+      <div class="logo-name-wrapper">
+        <div class="logo-name">
+          <img src="./assets/images/logo.png" class="logo" alt="logo app" srcset=""/>
+          <span class="logo-name__name">CSSScript</span>
+        </div>
+        <button class="logo-name__button">
+          <i
+            class="bx bx-arrow-from-right logo-name__icon"
+            id="logo-name__icon"
+          ></i>
+        </button>
+        <!-- <i class='bx bx-arrow-from-left'></i> -->
+      </div>
+
+      <div class="message">
+        <i class="message-icon bx bx-message-square-edit"></i>
+        <span class="message-text">New Mesage</span>
+        <span class="tooltip">New Mesage</span>
+      </div>
+
+      <ul class="features-list">
+        <li class="features-item inbox active">
+          <i class="bx bxs-inbox features-item-icon inbox-icon"
+            ><span class="status"></span
+          ></i>
+          <span class="features-item-text">Inbox</span>
+          <span class="inbox-number">99</span>
+          <span class="tooltip">Inbox</span>
+        </li>
+
+        <li class="features-item draft" >
+            <a href="Admin_Product.aspx">
+              <i class='bx bxs-package'></i>
+              <span class="features-item-text">Product</span>
+              <span class="tooltip">Product</span>
+            </a>
+        </li>
+
+        <li class="features-item draft" >
+            <a href="Admin_Education.aspx">
+              <i class='bx bxs-package'></i>
+              <span class="features-item-text">Education</span>
+              <span class="tooltip">Education</span>
+            </a>
+        </li>
+        <li class="features-item star">
+          <i class="bx bx-star features-item-icon"></i>
+          <span class="features-item-text">Starred</span>
+          <span class="tooltip">Starred</span>
+        </li>
+        <li class="features-item sent">
+          <i class="fas fa-box"></i>
+          <span class="features-item-text">Sent</span>
+          <span class="tooltip">Sent</span>
+        </li>
+        <li class="features-item trash">
+          <i class="bx bx-trash features-item-icon"></i>
+          <span class="features-item-text">Trash</span>
+          <span class="tooltip">Trash</span>
+        </li>
+        <li class="features-item spam">
+          <i class="bx bx-message-square-error features-item-icon"></i>
+          <span class="features-item-text">Spam</span>
+          <span class="tooltip">Spam</span>
+        </li>
+      </ul>
+
+    </div>
+    <div class="container">
+        <div style="margin:30px auto">
+            <div id="carbon-block">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+       </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- CSSScript Demo Page -->
+<!-- <ins class="auto-style2"
+     style="display:inline-block;"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="3025259193"></ins>-->
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+    <script type="text/javascript">
+      {
+        let sideBar = document.querySelector('.side-bar');
+        let arrowCollapse = document.querySelector('#logo-name__icon');
+        sideBar.onclick = () => {
+          sideBar.classList.toggle('collapse');
+          arrowCollapse.classList.toggle('collapse');
+          if (arrowCollapse.classList.contains('collapse')) {
+            arrowCollapse.classList =
+              'bx bx-arrow-from-left logo-name__icon collapse';
+          } else {
+            arrowCollapse.classList = 'bx bx-arrow-from-right logo-name__icon';
+          }
+        };
+      }
+    </script>
+=========
+    <form id="form1" runat="server">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<div id = "mainheader">
@@ -72,6 +175,7 @@
 						<li><a href="Admin_Orders.aspx" runat="server" id="tabadminorders"><i class="fa fa-paper-plane-o"></i>Orders</a></li>
 						<li><a href="Admin_Delivery.aspx" runat="server" id="tabadmindelivery"><i class="fa fa-truck"></i>Delivery</a></li>
 						<li><a href="Admin_Manufacturing.aspx" runat="server" id="tabadminmanufacturing"><i class="fa fa-envelope"></i>Manfacturing</a></li>
+												<li><a href="Admin_Education.aspx" runat="server" id="A1"><i class="fa fa-envelope"></i>Education</a></li>
 						<li><a href="AdminContactus.aspx" runat="server" id="tabcontactus"><i class="fa fa-address-book"></i> <span>Contactus</span></a></li>
 <%--						<li><a href="#" runat="server" id="tablogout"><i class="lnr lnr-exit"></i> <span><asp:Button ID="btn_logout" runat="server" OnClick="btn_logout_Click" Text="logout" BackColor="Red" BorderStyle="Solid" CssClass="tab-content" CausesValidation="False"/>--%>
                             </span></a></li>
