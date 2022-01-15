@@ -18,9 +18,6 @@
         .auto-style8 {
             font-size: x-large;
         }
-        .auto-style9 {
-            font-size: medium;
-        }
         .auto-style10 {
             width: 883px;
         }
@@ -36,6 +33,7 @@
         .auto-style16 {
             font-size: medium;
             text-align: center;
+            width: 448px;
         }
         .auto-style17 {
             font-size: medium;
@@ -49,7 +47,7 @@
         }
         .auto-style19 {
             font-size: medium;
-            width: 63px;
+            width: 319px;
             text-align: center;
         }
         .auto-style20 {
@@ -58,7 +56,7 @@
         }
         .auto-style21 {
             font-size: medium;
-            width: 63px;
+            width: 319px;
         }
         .auto-style22 {
             width: 332px
@@ -87,10 +85,13 @@
         .auto-style28 {
             text-decoration: underline;
         }
+        .auto-style29 {
+            font-size: medium;
+            width: 448px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
 
     <table class="auto-style5">
         <tr>
@@ -102,8 +103,10 @@
             <td class="auto-style19" rowspan="8">
                 &nbsp;</td>
             <td class="auto-style16">
-                <asp:LinkButton ID="Link_Product" runat="server" OnClick="Link_Product_Click">Product</asp:LinkButton>
-&nbsp;&gt; <span class="auto-style28"><strong>Add Product</strong></span></td>
+                <asp:LinkButton ID="Link_Product" runat="server" OnClick="Link_Product_Click" CausesValidation="False">Products</asp:LinkButton>
+&nbsp;&gt; <span class="auto-style28"><strong>
+                <asp:LinkButton ID="Link_ProdID" runat="server" OnClick="Link_ProdID_Click" CausesValidation="False"></asp:LinkButton>
+                </strong></span>&nbsp;&gt;<span class="auto-style28"><strong>Edit Product</strong></span></td>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style23">
                 &nbsp;</td>
@@ -180,16 +183,14 @@
         </tr>
         <tr class="auto-style8">
             <td class="auto-style21">&nbsp;</td>
-            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style29">&nbsp;</td>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style23">
                 <asp:Button ID="Btn_EditProdConfirm" runat="server" Text="Edit" Width="100px" OnClick="Btn_EditProdConfirm_Click" />
-&nbsp;<asp:Button ID="Btn_Cancel" runat="server" Text="Cancel" Width="100px" OnClick="Btn_Back_Click" />
+&nbsp;<asp:Button ID="Btn_Cancel" runat="server" Text="Cancel" Width="100px" OnClick="Btn_Back_Click" CausesValidation="False" />
             </td>
             <td class="auto-style26">
                 &nbsp;</td>
         </tr>
     </table>
-
-    </form>
 </asp:Content>

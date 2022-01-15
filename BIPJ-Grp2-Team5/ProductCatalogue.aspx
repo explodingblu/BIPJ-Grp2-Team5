@@ -61,7 +61,7 @@
                    &nbsp;</td>
                <td class="auto-style12" colspan="2">
                    &nbsp;<div class="text-left">
-                   <asp:DataList ID="DL_ProdCat" runat="server" BorderColor="Black" CellPadding="1000" CellSpacing="100" RepeatColumns="4" RepeatDirection="Horizontal" onitemcommand="DL_ProdCat_ItemCommand"> 
+                   <asp:DataList ID="DL_ProdCat" runat="server" OnPreRender="DL_Condition" BorderColor="Black" CellPadding="1000" CellSpacing="100" RepeatColumns="4" RepeatDirection="Horizontal" onitemcommand="DL_ProdCat_ItemCommand"> 
                        <ItemTemplate>
                            <table>
                                <tr>
@@ -85,7 +85,7 @@
                                </tr>
                                <tr>
                                    <td>Price</td>
-                                   <td><%#Eval("Product_Price") %></td>
+                                   <td><%#Eval("Product_Price") %><asp:Label ID="lbl_DiscPrice" runat="server" Text="Label"></asp:Label></td>
                                </tr>
                                <tr>
                                    <td>Status</td>
@@ -93,10 +93,10 @@
                                </tr>
                                <tr>
                                    <td>
-                                       <asp:Button ID="Btn_View" runat="server" CommandName="ViewBtn" Text="View" Width="75px" />
+                                       <asp:Button ID="Btn_View" runat="server" CommandName="ViewBtn" Text="View" Width="50px" />
                                    </td>
                                    <td>
-                                       <asp:Button ID="Btn_Cart" runat="server" CommandName="CartBtn" Text="Cart" Width="75px" />
+                                       <asp:Button ID="Btn_Cart" runat="server" CommandName="CartBtn" Text="Cart" Width="50px" />
                                    </td>                          
                                </tr>
                            </table>

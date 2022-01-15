@@ -100,8 +100,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <form id="form1" runat="server">
-
     <table class="auto-style5">
         <tr>
             <td class="auto-style10" colspan="2">&nbsp;</td>
@@ -112,7 +110,7 @@
             <td class="auto-style17" rowspan="7">
                 &nbsp;</td>
             <td class="auto-style27">
-                <asp:LinkButton ID="Link_Product" runat="server" OnClick="Link_Product_Click">Product</asp:LinkButton>
+                <asp:LinkButton ID="Link_Product" runat="server" OnClick="Link_Product_Click" CausesValidation="False">Product</asp:LinkButton>
 &nbsp;&gt; <span class="auto-style28"><strong>Add Product</strong></span></td>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style18">
@@ -131,7 +129,7 @@
             <td class="auto-style26">
                 <asp:RequiredFieldValidator ID="rfv_ProdID" runat="server" ControlToValidate="tb_ProdID" CssClass="auto-style20" ErrorMessage="Please enter Product ID" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <asp:CustomValidator ID="cv_ExistProdID" runat="server" ControlToValidate="tb_ProdID" ErrorMessage="Product ID already exist" ForeColor="Red" OnServerValidate="CV_Exist_ServerValidate"></asp:CustomValidator>
+                <asp:CustomValidator ID="cv_ExistProdID" runat="server" ControlToValidate="tb_ProdID" ErrorMessage="Product ID already exist" ForeColor="Red" OnServerValidate="CV_Exist_ServerValidate" CssClass="auto-style20"></asp:CustomValidator>
                 <br />
                 <asp:CompareValidator ID="cv_ProdID" runat="server" ControlToValidate="tb_ProdID" CssClass="auto-style20" ErrorMessage="Only Interger value is allowed" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">Only Numeric value is allowed</asp:CompareValidator>
                 <br />
@@ -193,11 +191,9 @@
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style9" colspan="2">
                 <asp:Button ID="Btn_AddProdConfirm" runat="server" Text="Add" Width="100px" OnClick="Btn_AddProdConfirm_Click" />
-&nbsp;<asp:Button ID="Btn_Back" runat="server" Text="Cancel" Width="100px" OnClick="Btn_Back_Click" />
+&nbsp;<asp:Button ID="Btn_Back" runat="server" Text="Cancel" Width="100px" OnClick="Btn_Back_Click" CausesValidation="False" />
             </td>
         </tr>
     </table>
-
-    </form>
 
 </asp:Content>

@@ -17,6 +17,7 @@ namespace BIPJ_Grp2_Team5
                 Product aProd = new Product();
                 string prodID = Request.QueryString["Product_ID"].ToString();
                 prod = aProd.getProduct(prodID);
+                lbl_Breadcrumb.Text = "ID " + prodID.ToString();
                 lbl_prodName.Text = prod.Product_Name;
                 lbl_prodDesc.Text = prod.Product_Desc;
                 lbl_prodPrice.Text = prod.Product_Price.ToString("c");
@@ -36,6 +37,11 @@ namespace BIPJ_Grp2_Team5
         {
             string prodID = lbl_prodID.Text;
             Response.Redirect("Admin_ProductDetails_edit.aspx?Product_ID=" + prodID);
+        }
+
+        protected void Link_Product_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin_Product.aspx");
         }
     }
 }

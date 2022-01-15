@@ -15,13 +15,22 @@ namespace BIPJ_Grp2_Team5
     {
 
         /// <summary>
-        /// form1 control.
+        /// Link_Product control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.LinkButton Link_Product;
+
+        /// <summary>
+        /// lbl_Breadcrumb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Breadcrumb;
 
         /// <summary>
         /// img_prodImg control.

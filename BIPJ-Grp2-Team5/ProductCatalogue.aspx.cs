@@ -18,7 +18,7 @@ namespace BIPJ_Grp2_Team5
         List<Product> prodList = new List<Product>();
         protected void Page_Load(object sender, EventArgs e)
         {
-        
+
             // Load sample data only once, when the page is first loaded.
             if (!Page.IsPostBack)
             {
@@ -145,6 +145,14 @@ namespace BIPJ_Grp2_Team5
             }
             DL_ProdCat.DataSource = prodList;
             DL_ProdCat.DataBind();
+        }
+
+        protected void DL_Condition(object sender, EventArgs e)
+        {
+            foreach (DataListItem item in DL_ProdCat.Items)
+            {
+
+            }
         }
     }
 }

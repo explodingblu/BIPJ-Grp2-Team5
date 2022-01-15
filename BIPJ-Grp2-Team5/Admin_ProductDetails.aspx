@@ -20,10 +20,6 @@
             width: 601px;
                 height: 102px;
             }
-        .auto-style14 {
-            font-size: medium;
-            width: 614px;
-        }
         .auto-style16 {
                 font-size: medium;
                 width: 601px;
@@ -32,31 +28,20 @@
             .auto-style20 {
                 font-size: medium;
                 text-align: right;
+                width: 303px;
             }
             .auto-style27 {
                 height: 102px;
             }
-            .auto-style29 {
-                font-size: medium;
-                width: 614px;
-                height: 60px;
-            }
             .auto-style30 {
                 font-size: medium;
                 height: 60px;
-            }
-            .auto-style33 {
-                font-size: medium;
-                width: 614px;
-                height: 40px;
+                width: 509px;
             }
             .auto-style34 {
                 font-size: medium;
                 height: 40px;
-            }
-            .auto-style36 {
-                font-size: medium;
-                text-align: center;
+                width: 509px;
             }
             .auto-style37 {
                 font-size: medium;
@@ -80,10 +65,48 @@
                 width: 592px;
                 text-align: center;
             }
+            .auto-style43 {
+                font-size: medium;
+                width: 592px;
+                text-align: left;
+            }
+            .auto-style44 {
+                text-decoration: underline;
+            }
+            .auto-style45 {
+                font-size: medium;
+                text-align: center;
+            }
+            .auto-style46 {
+                height: 102px;
+                width: 509px;
+            }
+            .auto-style47 {
+                font-size: medium;
+                width: 509px;
+            }
+            .auto-style48 {
+                font-size: medium;
+                text-align: center;
+                width: 509px;
+            }
+            .auto-style49 {
+                font-size: medium;
+                width: 303px;
+            }
+            .auto-style50 {
+                font-size: medium;
+                height: 60px;
+                width: 303px;
+            }
+            .auto-style51 {
+                font-size: medium;
+                height: 40px;
+                width: 303px;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <form id="form1" runat="server">
 
     <table class="auto-style5">
         <tr>
@@ -91,19 +114,22 @@
             <td class="auto-style41"></td>
             <td class="auto-style10"></td>
             <td colspan="2" class="auto-style27"><h1 class="auto-style7"><strong>Product Add</strong></h1></td>
-            <td class="auto-style27"></td>
+            <td class="auto-style46"></td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style39" rowspan="9">
                 &nbsp;</td>
-            <td class="auto-style42">
-                &nbsp;</td>
+            <td class="auto-style43">
+                <asp:LinkButton ID="Link_Product" runat="server" OnClick="Link_Product_Click" CausesValidation="False">Products</asp:LinkButton>
+&nbsp;&gt; <strong>
+                <asp:Label ID="lbl_Breadcrumb" runat="server" CssClass="auto-style44" Text="Label"></asp:Label>
+                </strong></td>
             <td class="auto-style16">
             </td>
             <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style14">
+            <td class="auto-style49">
                 &nbsp;</td>
-            <td class="auto-style9">
+            <td class="auto-style47">
                 &nbsp;</td>
         </tr>
         <tr class="auto-style8">
@@ -112,42 +138,42 @@
             <td class="auto-style16">
                 &nbsp;</td>
             <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style14">
+            <td class="auto-style49">
                 &nbsp;</td>
-            <td class="auto-style9">
-                &nbsp;</td>
+            <td class="auto-style48">
+                Review</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style42" rowspan="6">
                 &nbsp;</td>
-            <td class="auto-style36" colspan="3">
+            <td class="auto-style45" colspan="3">
                 <asp:Image ID="img_prodImg" runat="server" Height="175px" Width="175px" />
             </td>
-            <td class="auto-style9">
+            <td class="auto-style47">
                 &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
                 Product ID</td>
-            <td class="auto-style14">
+            <td class="auto-style49">
                 <asp:Label ID="lbl_prodID" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style9">
+            <td class="auto-style47">
                 &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
                 Product Name</td>
-            <td class="auto-style14">
+            <td class="auto-style49">
                 <asp:Label ID="lbl_prodName" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style9">
+            <td class="auto-style47">
                 &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
                 Product Description</td>
-            <td class="auto-style29">
+            <td class="auto-style50">
                 <asp:Label ID="lbl_prodDesc" runat="server" Text="Label"></asp:Label>
             </td>
             <td class="auto-style30">
@@ -156,7 +182,7 @@
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
                 Product Price (SGD)</td>
-            <td class="auto-style33">
+            <td class="auto-style51">
                 <asp:Label ID="lbl_prodPrice" runat="server" Text="Label"></asp:Label>
             </td>
             <td class="auto-style34">
@@ -165,10 +191,10 @@
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
                 Product Discount (%)</td>
-            <td class="auto-style14">
+            <td class="auto-style49">
                 <asp:Label ID="lbl_Discount" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style9">
+            <td class="auto-style47">
                 &nbsp;</td>
         </tr>
         <tr class="auto-style8">
@@ -180,10 +206,9 @@
                 <asp:Button ID="Btn_Edit" runat="server" Text="Edit" Width="100px" OnClick="Btn_Edit_Click" />
 &nbsp; <asp:Button ID="Btn_Back" runat="server" Text="Cancel" Width="100px" OnClick="Btn_Back_Click" />
                 &nbsp;</td>
-            <td class="auto-style9">
+            <td class="auto-style47">
                 &nbsp;</td>
         </tr>
     </table>
 
-    </form>
 </asp:Content>

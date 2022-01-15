@@ -17,6 +17,7 @@ namespace BIPJ_Grp2_Team5
                 Product aProd = new Product();
                 string prodID = Request.QueryString["Product_ID"].ToString();
                 prod = aProd.getProduct(prodID);
+                Link_ProdID.Text = "ID " + prodID.ToString();
                 tb_ProdName.Text = prod.Product_Name.ToString();
                 tb_ProdDesc.Text = prod.Product_Desc.ToString();
                 tb_ProdPrice.Text = prod.Product_Price.ToString();
@@ -51,7 +52,7 @@ namespace BIPJ_Grp2_Team5
                 string datProdImg = img_result.ImageUrl;
                 decimal datProdPrice = decimal.Parse(tb_ProdPrice.Text);
                 string datDiscount = tb_ProdDisc.Text;
-                string datstatus = DD_Status.SelectedItem.Text;
+                string datstatus = DD_Status.SelectedItem.Value;
                 result = Prod.ProductUpdate(datProdID, datProdName, datProdPrice, datProdDesc, datProdImg, datDiscount, datstatus);
                 if (result > 0)
                 {
@@ -69,6 +70,17 @@ namespace BIPJ_Grp2_Team5
         }
 
         protected void Btn_Back_Click(object sender, EventArgs e)
+        {
+            string prodID = lbl_ProdID.Text;
+            Response.Redirect("Admin_ProductDetails.aspx?Product_ID=" + prodID);
+        }
+
+        protected void Link_Product_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin_Product.aspx");
+        }
+
+        protected void Link_ProdID_Click(object sender, EventArgs e)
         {
             string prodID = lbl_ProdID.Text;
             Response.Redirect("Admin_ProductDetails.aspx?Product_ID=" + prodID);
