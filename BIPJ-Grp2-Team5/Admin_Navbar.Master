@@ -124,7 +124,7 @@
       }
     </script>
 =========
-
+    <form id="form1" runat="server">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<div id = "mainheader">
@@ -162,7 +162,7 @@
 				</div>
 			</div>
 		</nav>
-
+		
 		<!-- END NAVBAR -->
 		<!-- LEFT SIDEBAR -->
 		<div id="sidebar-nav" class="sidebar">
@@ -187,7 +187,7 @@
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
 			<div>
-				<asp:ContentPlaceHolder ID="Main" runat="server">
+				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 				
 				</asp:ContentPlaceHolder>
 			</div>

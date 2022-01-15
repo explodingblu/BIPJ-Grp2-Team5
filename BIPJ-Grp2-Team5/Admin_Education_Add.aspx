@@ -1,8 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_Navbar.Master" AutoEventWireup="true" CodeBehind="Admin_Education_Add.aspx.cs" ValidateRequest="false" Inherits="BIPJ_Grp2_Team5.Admin_Education_Add" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_Navbar.Master" AutoEventWireup="true" CodeBehind="WebForm3.aspx.cs" Inherits="BIPJ_Grp2_Team5.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
-    <style type="text/css">
+        <style type="text/css">
     .auto-style5 {
         width: 100%;
         height: 471px;
@@ -24,13 +22,11 @@
     }
     .auto-style9 {
         width: 498px;
-            height: 113px;
-        }
+    }
     .auto-style10 {
         width: 783px;
         text-align: right;
-            height: 113px;
-        }
+    }
     .auto-style12 {
         width: 783px;
         height: 193px;
@@ -44,36 +40,39 @@
         height: 193px;
         text-align: center;
     }
-        .auto-style16 {
-            height: 113px;
+        .auto-style15 {
+            font-size: medium;
         }
     </style>
-    <script>
-        $(function () {
+        <script>
+            $(function () {
 
-            var jq = $.noConflict();
-            jq(function () {
-                jq('.toggle-two').bootstrapToggle({
-                    Yes: 'Yes',
-                    No: 'No'
+                var jq = $.noConflict();
+                jq(function () {
+                    jq('.toggle-two').bootstrapToggle({
+                        Yes: 'Yes',
+                        No: 'No'
+                    })
                 })
-            })
-            jq(function () {
-                jq('.toggle-two').change(function () {
-                var vbv = jq(this).prop('checked');
-                    alert(vbv);
-                    jq(this).parent().siblings("div").html('Toggle: ' + jq(this).prop('checked'))
+                jq(function () {
+                    jq('.toggle-two').change(function () {
+                        var vbv = jq(this).prop('checked');
+                        alert(vbv);
+                        jq(this).parent().siblings("div").html('Toggle: ' + jq(this).prop('checked'))
 
 
 
+                    })
                 })
+
             })
 
-        })
-
-    </script>
+        </script>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    
     <form id="form1" runat="server">
     <table class="auto-style5">
     <tr>
@@ -84,7 +83,7 @@
     <tr>
         <td class="auto-style14"></td>
         <td class="auto-style12">
-    <table border="0" cellpadding="0" cellspacing="0">
+           <table border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td>
         Name:
@@ -136,19 +135,12 @@
     </td>
 </tr>
 </table>
-            </td>
-        <td class="auto-style13"></td>
-    </tr>
-    <tr>
-        <td class="auto-style9"></td>
-        <td class="auto-style10">
-        </td>
-        <td class="auto-style16"></td>
-    </tr>
-</table>
-</form>
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script type="text/javascript" src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
 <script type="text/javascript">
     tinymce.init({ selector: 'textarea' });
 </script>
+
+
+</table>
+</form>
 </asp:Content>

@@ -11,7 +11,7 @@ namespace BIPJ_Grp2_Team5
 {
 
 
-    public partial class Admin_Education_Add
+    public partial class WebForm3
     {
 
         /// <summary>

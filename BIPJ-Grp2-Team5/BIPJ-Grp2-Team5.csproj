@@ -107,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin_Delivery.aspx" />
-    <Content Include="Admin_Education_Add.aspx" />
     <Content Include="Admin_Index.aspx" />
     <Content Include="Admin_Manufacturing.aspx" />
     <Content Include="Admin_Orders.aspx" />
@@ -160,7 +159,6 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Education.aspx" />
     <Content Include="Admin_Education.aspx" />
-    <Content Include="Education_DynamicPage.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
     <Content Include="img\air_pollutuon.jpg" />
@@ -273,13 +271,6 @@
     </Compile>
     <Compile Include="Admin_Delivery.aspx.designer.cs">
       <DependentUpon>Admin_Delivery.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Education_Add.aspx.cs">
-      <DependentUpon>Admin_Education_Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_Education_Add.aspx.designer.cs">
-      <DependentUpon>Admin_Education_Add.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Index.aspx.cs">
       <DependentUpon>Admin_Index.aspx</DependentUpon>
@@ -408,12 +399,12 @@
     <Compile Include="Admin_Education.aspx.designer.cs">
       <DependentUpon>Admin_Education.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Education_DynamicPage.aspx.cs">
-      <DependentUpon>Education_DynamicPage.aspx</DependentUpon>
+    <Compile Include="Admin_Education_Add.aspx.cs">
+      <DependentUpon>Admin_Education_Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Education_DynamicPage.aspx.designer.cs">
-      <DependentUpon>Education_DynamicPage.aspx</DependentUpon>
+    <Compile Include="Admin_Education_Add.aspx.designer.cs">
+      <DependentUpon>Admin_Education_Add.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
