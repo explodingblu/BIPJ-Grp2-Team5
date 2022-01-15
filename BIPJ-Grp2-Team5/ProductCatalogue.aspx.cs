@@ -151,7 +151,6 @@ namespace BIPJ_Grp2_Team5
         {
             foreach (DataListItem item in DL_ProdCat.Items)
             {
-
             }
         }
     }
