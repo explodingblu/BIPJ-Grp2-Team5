@@ -26,7 +26,7 @@
     }
     .auto-style10 {
         width: 765px;
-        text-align: right;
+        text-align: center;
     }
     .auto-style12 {
         width: 765px;
@@ -146,7 +146,7 @@
         <td class="auto-style22">&nbsp;</td>
         <td class="auto-style14"></td>
         <td class="auto-style12">
-            <asp:GridView ID="gvProduct" runat="server" Width="1250px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" OnRowDeleting="gvProduct_RowDeleting" DataKeyNames="Product_ID" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnSorting="gvProduct_Sorting" onrowdatabound="gvProduct_RowDataBound">
+            <asp:GridView ID="gvProduct" runat="server" Width="1250px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" OnRowDeleting="gvProduct_RowDeleting" DataKeyNames="Product_ID" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnSorting="gvProduct_Sorting" onrowdatabound="gvProduct_RowDataBound" AllowPaging="True">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Image" DataImageUrlFormatString="~\images\{0}" ControlStyle-Width="100" ControlStyle-Height = "100">

@@ -180,18 +180,13 @@ namespace BIPJ_Grp2_Team5
             bind(); //rebind GridView
         }
 
-        //learn row data bound
-
         protected void gvProduct_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            Button btnDateRange = e.Row.FindControl("btnDateRange") as Button;
+            Button btn = e.Row.FindControl("btn_Status") as Button;
 
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                Button btn = e.Row.Cells[5].Controls[1] as Button;
-                string datakey = gvProduct.DataKeys[e.Row.RowIndex].Value.ToString();
-
-                btn.Attributes["onclick"] = "javascript:document.getElementById('hdnImpressionTagID').value = '" + datakey + "'";
+                btn.Text = btn.CommandName;
             }
         }
     }

@@ -140,7 +140,7 @@ namespace BIPJ_Grp2_Team5
             string prod_ID, prod_Name, prod_Desc, prod_Image, status;
             decimal prod_Price, discount;
 
-            string queryStr = "SELECT * FROM Products Order By Product_Name";
+            string queryStr = "SELECT * FROM Products Order By Product_ID";
 
             SqlConnection conn = new SqlConnection(_connStr);
             SqlCommand cmd = new SqlCommand(queryStr, conn);

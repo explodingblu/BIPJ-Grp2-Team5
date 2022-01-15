@@ -26,6 +26,12 @@
             text-align: right;
             height: 66px;
         }
+        #Btn_View {
+            width: 75px;
+        }
+        #Btn_Cart {
+            width: 75px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -87,10 +93,10 @@
                                </tr>
                                <tr>
                                    <td>
-                                       <asp:Button ID="Btn_View" runat="server" CommandName="ViewBtn" Text="View" />
+                                       <asp:Button ID="Btn_View" runat="server" CommandName="ViewBtn" Text="View" Width="75px" />
                                    </td>
                                    <td>
-                                       <asp:Button ID="Btn_Cart" runat="server" CommandName="CartBtn" Text="Cart" />
+                                       <asp:Button ID="Btn_Cart" runat="server" CommandName="CartBtn" Text="Cart" Width="75px" />
                                    </td>                          
                                </tr>
                            </table>
