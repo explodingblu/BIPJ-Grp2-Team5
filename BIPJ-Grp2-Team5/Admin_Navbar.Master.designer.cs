@@ -87,15 +87,6 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.HtmlControls.HtmlAnchor tabadminmanufacturing;
 
         /// <summary>
-        /// A1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
-
-        /// <summary>
         /// tabcontactus control.
         /// </summary>
         /// <remarks>
@@ -103,6 +94,15 @@ namespace BIPJ_Grp2_Team5
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor tabcontactus;
+
+        /// <summary>
+        /// tabeducation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor tabeducation;
 
         /// <summary>
         /// ContentPlaceHolder1 control.
