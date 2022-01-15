@@ -27,11 +27,6 @@
             font-size: medium;
             width: 614px;
         }
-        .auto-style16 {
-            font-size: medium;
-            width: 455px;
-            text-align: center;
-        }
         .auto-style19 {
             font-size: medium;
             width: 217px;
@@ -39,6 +34,19 @@
         .auto-style20 {
             font-size: medium;
             text-align: right;
+        }
+        .auto-style21 {
+            width: 455px;
+            text-align: center;
+        }
+        .auto-style22 {
+            width: 455px;
+            text-align: center;
+            font-size: large;
+        }
+        .auto-style23 {
+            text-align: center;
+            font-size: large;
         }
     </style>
 </asp:Content>
@@ -48,51 +56,59 @@
     <table class="auto-style5">
         <tr>
             <td class="auto-style10">&nbsp;</td>
-            <td colspan="2"><h1 class="auto-style7"><strong>Product View</strong></h1></td>
+            <td colspan="2"><h1 class="auto-style7">View
+                <asp:Label ID="lbl_prodName" runat="server" Text="Label"></asp:Label>
+                </h1></td>
             <td>&nbsp;</td>
         </tr>
-        <tr class="auto-style8">
-            <td class="auto-style16" rowspan="5">
+        <tr>
+            <td class="auto-style21">
+                <asp:LinkButton ID="Link_Shop" runat="server" OnClick="Link_Product_Click" CssClass="auto-style9">Shop</asp:LinkButton>
+                <span class="auto-style9">&nbsp;&gt;</span><span class="auto-style28"><strong><span class="auto-style9"> View Product</span></strong></span></td>
+            <td colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style22">Process</td>
+            <td colspan="2" class="auto-style23">Details</td>
+            <td class="auto-style23">Review</td>
+        </tr>
+        <tr>
+            <td class="auto-style10" rowspan="6"></td>
+            <td colspan="2" class="text-center">
                 <asp:Image ID="img_prodImg" runat="server" Height="175px" Width="175px" />
             </td>
+            <td rowspan="6">&nbsp;</td>
+        </tr>
+        <tr class="auto-style8">
             <td class="auto-style19">Product ID</td>
             <td class="auto-style14">
                 <asp:Label ID="lbl_prodID" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style9">
-                &nbsp;</td>
-        </tr>
-        <tr class="auto-style8">
-            <td class="auto-style19">Product Name</td>
-            <td class="auto-style14">
-                <asp:Label ID="lbl_prodName" runat="server" Text="Label"></asp:Label>
-            </td>
-            <td class="auto-style9">
-                &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style19">Product Description</td>
             <td class="auto-style14">
                 <asp:Label ID="lbl_prodDesc" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style9">
-                &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style19">Product Price ($)</td>
             <td class="auto-style14">
                 <asp:Label ID="lbl_prodPrice" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style9">
-                &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style19">Product Discount (%)</td>
             <td class="auto-style14">
                 <asp:Label ID="lbl_Discount" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style9">
-                &nbsp;</td>
+        </tr>
+        <tr class="auto-style8">
+            <td class="auto-style19">Status</td>
+            <td class="auto-style14">
+                <asp:Label ID="lbl_status" runat="server" Text="Label"></asp:Label>
+            </td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style11">&nbsp;</td>

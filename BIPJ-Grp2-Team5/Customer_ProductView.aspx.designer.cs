@@ -24,6 +24,24 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// lbl_prodName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_prodName;
+
+        /// <summary>
+        /// Link_Shop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Link_Shop;
+
+        /// <summary>
         /// img_prodImg control.
         /// </summary>
         /// <remarks>
@@ -40,15 +58,6 @@ namespace BIPJ_Grp2_Team5
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_prodID;
-
-        /// <summary>
-        /// lbl_prodName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_prodName;
 
         /// <summary>
         /// lbl_prodDesc control.
@@ -76,6 +85,15 @@ namespace BIPJ_Grp2_Team5
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_Discount;
+
+        /// <summary>
+        /// lbl_status control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_status;
 
         /// <summary>
         /// Btn_Buy control.
