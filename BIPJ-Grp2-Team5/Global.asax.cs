@@ -14,13 +14,20 @@ namespace BIPJ_Grp2_Team5
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
+            
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Add routes
+            RegisterRoutes(RouteTable.Routes);
         }
-        static void RegisterRoutes(RouteCollection routes)
+        void RegisterRoutes(RouteCollection routes)
         {
-            routes.MapPageRoute("DynamicPage", "Education/{PageName}.aspx", "~/DynamicPage.aspx");
+            routes.MapPageRoute("Education_DynamicPage",
+                "Education/{pageName}.aspx",
+                "~/Education_DynamicPage.aspx");
         }
+
     }
 
 
