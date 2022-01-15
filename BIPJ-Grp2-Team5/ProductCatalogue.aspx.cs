@@ -18,6 +18,7 @@ namespace BIPJ_Grp2_Team5
         List<Product> prodList = new List<Product>();
         protected void Page_Load(object sender, EventArgs e)
         {
+        
             // Load sample data only once, when the page is first loaded.
             if (!Page.IsPostBack)
             {

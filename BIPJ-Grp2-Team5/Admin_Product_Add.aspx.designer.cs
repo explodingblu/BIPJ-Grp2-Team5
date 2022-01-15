@@ -24,6 +24,15 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Link_Product control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Link_Product;
+
+        /// <summary>
         /// lbl_ImgTemp control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,42 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.TextBox tb_ProdID;
 
         /// <summary>
+        /// rfv_ProdID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_ProdID;
+
+        /// <summary>
+        /// cv_ExistProdID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cv_ExistProdID;
+
+        /// <summary>
+        /// cv_ProdID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cv_ProdID;
+
+        /// <summary>
+        /// cv_LessProdID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cv_LessProdID;
+
+        /// <summary>
         /// tb_ProdName control.
         /// </summary>
         /// <remarks>
@@ -49,6 +94,15 @@ namespace BIPJ_Grp2_Team5
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_ProdName;
+
+        /// <summary>
+        /// rfv_ProdName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_ProdName;
 
         /// <summary>
         /// tb_ProdDesc control.
@@ -60,6 +114,15 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.TextBox tb_ProdDesc;
 
         /// <summary>
+        /// rfv_ProdDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_ProdDesc;
+
+        /// <summary>
         /// fu_ProdImg control.
         /// </summary>
         /// <remarks>
@@ -67,6 +130,15 @@ namespace BIPJ_Grp2_Team5
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fu_ProdImg;
+
+        /// <summary>
+        /// rfv_ProdImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_ProdImg;
 
         /// <summary>
         /// tb_ProdPrice control.
@@ -78,6 +150,24 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.TextBox tb_ProdPrice;
 
         /// <summary>
+        /// rfv_ProdPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_ProdPrice;
+
+        /// <summary>
+        /// cv_ProdPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cv_ProdPrice;
+
+        /// <summary>
         /// tb_ProdDisc control.
         /// </summary>
         /// <remarks>
@@ -85,6 +175,15 @@ namespace BIPJ_Grp2_Team5
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_ProdDisc;
+
+        /// <summary>
+        /// cv_LessDiscount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cv_LessDiscount;
 
         /// <summary>
         /// Btn_AddProdConfirm control.
