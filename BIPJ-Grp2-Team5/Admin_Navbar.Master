@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>JexTech | Admin Panel</title>
+    <title>EcoVerse | Admin Panel</title>
     <asp:ContentPlaceHolder ID="head" runat="server">   
 
     </asp:ContentPlaceHolder>
@@ -22,6 +22,7 @@
 
 </head>
 <body>
+	<form id ="form1" runat="server">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<div id = "mainheader">
@@ -75,7 +76,7 @@
 						<li><a href="AdminContactus.aspx" runat="server" id="tabcontactus"><i class="fa fa-address-book"></i> <span>Contactus</span></a></li>
 						<li><a href="Admin_Education.aspx" runat="server" id="tabeducation"><i class="fa fa-book"></i> <span>Education</span></a></li>
 <%--						<li><a href="#" runat="server" id="tablogout"><i class="lnr lnr-exit"></i> <span><asp:Button ID="btn_logout" runat="server" OnClick="btn_logout_Click" Text="logout" BackColor="Red" BorderStyle="Solid" CssClass="tab-content" CausesValidation="False"/>--%>
-                            </span></a></li>
+
 					</ul>
 				</nav>
 			</div>
@@ -104,7 +105,7 @@
 
 
 
-  
+	</form>
 	<!-- Javascript -->
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>

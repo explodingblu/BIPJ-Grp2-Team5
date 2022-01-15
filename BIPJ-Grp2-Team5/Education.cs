@@ -19,14 +19,15 @@ namespace BIPJ_Grp2_Team5
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@PageName", txtPageName.Text.Replace(" ", "-"));
-                    cmd.Parameters.AddWithValue("@Title", txtTitle.Text);
-                    cmd.Parameters.AddWithValue("@Content", txtContent.Text);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    Response.Redirect("~/Default.aspx");
+                    //cmd.Parameters.AddWithValue("@PageName", txtPageName.Text.Replace(" ", "-"));
+                    //cmd.Parameters.AddWithValue("@Title", txtTitle.Text);
+                    //cmd.Parameters.AddWithValue("@Content", txtContent.Text);
+                    //con.Open();
+                    //cmd.ExecuteNonQuery();
+                    //con.Close();
+                    //Response.Redirect("~/Default.aspx");
                 }
             }
         }
     }
+}
