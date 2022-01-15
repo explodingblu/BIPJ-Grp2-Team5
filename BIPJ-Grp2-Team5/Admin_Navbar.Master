@@ -22,7 +22,6 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<div id = "mainheader">
@@ -104,7 +103,7 @@
 
 
 
-    </form>
+  
 	<!-- Javascript -->
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
