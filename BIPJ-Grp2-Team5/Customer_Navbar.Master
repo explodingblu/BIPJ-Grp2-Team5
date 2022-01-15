@@ -92,16 +92,17 @@
                             <!--End of navbar-header-->
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
+                            <!-- when you change the link to ur page, rmber to do that in the master.cs as well -->
                             <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right main_menu">
-                                    <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
-                                    <li><a href="#welcome">about</a></li>
-                                    <li><a href="ProductCatalogue.aspx">Shop</a></li>
-                                    <li><a href="Education.aspx">Education</a></li>
-                                    <li><a href="#event">event</a></li>
-                                    <li><a href="#testimonial">testimonial</a></li>
-                                    <li><a href="#blog">blog</a></li>
-                                    <li><a href="#contact">contact us</a></li>
+                                    <li runat="server" id="nav1"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
+                                    <li runat="server" id="nav2"><a href="#welcome">about</a></li>
+                                    <li runat="server" id="nav3"><a href="ProductCatalogue.aspx">Shop</a></li>
+                                    <li runat="server" id="nav4"><a href="Education.aspx">Education</a></li>
+                                    <li runat="server" id="nav5"><a href="#event">event</a></li>
+                                    <li runat="server" id="nav6"><a href="#testimonial">testimonial</a></li>
+                                    <li runat="server" id="nav7"><a href="#blog">blog</a></li>
+                                    <li runat="server" id="nav8"><a href="#contact">contact us</a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
@@ -115,6 +116,47 @@
             <!--end of header area-->
         </section>
         <!--End of Hedaer Section-->
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>-->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-1.12.3.min.js"></script>
+
+        <!--Counter UP Waypoint-->
+        <script src="js/waypoints.min.js"></script>
+        <!--Counter UP-->
+        <script src="js/jquery.counterup.min.js"></script>
+
+        <script>
+            //for counter up
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        </script>
+
+        <!--Isotope-->
+        <script src="js/isotope/min/scripts-min.js"></script>
+        <script src="js/isotope/cells-by-row.js"></script>
+        <script src="js/isotope/isotope.pkgd.min.js"></script>
+        <script src="js/isotope/packery-mode.pkgd.min.js"></script>
+        <script src="js/isotope/scripts.js"></script>
+
+
+        <!--Back To Top-->
+        <script src="js/backtotop.js"></script>
+
+
+        <!--WOW With Animation-->
+        <script src="js/wow.min.js"></script>
+        <!--WOW Activated-->
+        <script>
+            new WOW().init();
+        </script>
+
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Custom JavaScript-->
 <div>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>

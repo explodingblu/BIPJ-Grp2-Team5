@@ -21,6 +21,7 @@ namespace BIPJ_Grp2_Team5
                 lbl_prodDesc.Text = prod.Product_Desc;
                 lbl_prodPrice.Text = prod.Product_Price.ToString("c");
                 lbl_Discount.Text = prod.Discount.ToString("c");
+                lbl_status.Text = prod.Status;
                 img_prodImg.ImageUrl = "~\\images\\" + prod.Product_Image;
 
                 lbl_prodID.Text = prodID.ToString();
@@ -40,6 +41,11 @@ namespace BIPJ_Grp2_Team5
         protected void Btn_Buy_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Link_Product_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ProductCatalogue.aspx");
         }
     }
 }
