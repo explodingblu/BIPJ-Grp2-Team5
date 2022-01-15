@@ -111,17 +111,19 @@ namespace BIPJ_Grp2_Team5
                 //        break;
                 //    }
 
-                //case "AdminContactus":
-                //case "AdminContactus.aspx":
-                //    {
-                //        tabadmindelivery.Attributes.Remove("active");
-                //        tabadminindex.Attributes.Remove("active");
-                //        tabadminproduct.Attributes.Remove("active");
-                //        tabadminorders.Attributes.Remove("active");
-                //        tabadminmanufacturing.Attributes.Remove("active");
-                //        tabcontactus.Attributes.Add("class", "active");
-                //        break;
-                //    }
+                case "Admin_Education":
+                case "Admin_Education.aspx":
+                    {
+                        tabadmindelivery.Attributes.Remove("active");
+                        tabadminindex.Attributes.Remove("active");
+                        tabadminproduct.Attributes.Remove("active");
+                        tabadminorders.Attributes.Remove("active");
+                        tabadminmanufacturing.Attributes.Remove("active");
+                        tabcontactus.Attributes.Remove("active");
+                        tabeducation.Attributes.Add("class", "active");
+
+                        break;
+                    }
 
 
 
