@@ -161,6 +161,7 @@
     <Content Include="Admin_Education.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
+    <Content Include="Images\Refresh.jpeg" />
     <Content Include="img\air_pollutuon.jpg" />
     <Content Include="img\audiojungle.png" />
     <Content Include="img\cliemate.jpg" />

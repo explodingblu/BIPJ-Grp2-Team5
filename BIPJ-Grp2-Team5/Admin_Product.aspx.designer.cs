@@ -15,6 +15,33 @@ namespace BIPJ_Grp2_Team5
     {
 
         /// <summary>
+        /// ImgBtn_Refresh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_Refresh;
+
+        /// <summary>
+        /// tb_Search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_Search;
+
+        /// <summary>
+        /// Btn_Search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Search;
+
+        /// <summary>
         /// gvProduct control.
         /// </summary>
         /// <remarks>

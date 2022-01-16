@@ -189,5 +189,31 @@ namespace BIPJ_Grp2_Team5
                 btn.Text = btn.CommandName;
             }
         }
+
+        protected void ImgBtn_Refresh_Click(object sender, ImageClickEventArgs e)
+        {
+            bind();
+        }
+
+        protected void Btn_Search_Click(object sender, EventArgs e)
+        {
+            String SearchValue = tb_Search.Text;
+            Product prod = new Product();
+            Product SearchResult = new Product();
+            List<Product> searchList = new List<Product>();
+            SearchResult = prod.getProduct(SearchValue);
+            searchList.Add(SearchResult);
+            if (searchList.Contains(null))
+            {
+                string message = "ID "+ SearchValue + " does not exist. Please search another ID.";
+                string title = "Search ID";
+                DialogResult resulting = MessageBox.Show(message, title);
+            }
+            else
+            {
+                gvProduct.DataSource = searchList;
+                gvProduct.DataBind();
+            }
+        }
     }
 }
