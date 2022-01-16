@@ -23,6 +23,7 @@ namespace BIPJ_Grp2_Team5
         private string _prodImage = "";
         private decimal _discount = 0;
         private string _status = "";
+        private int _stklvl = 0;
 
         // Default constructor
         public Product()
@@ -30,7 +31,7 @@ namespace BIPJ_Grp2_Team5
         }
 
         // Constructor that take in all data required to build a Product object
-        public Product(string prodID, string prodName, decimal prodPrice, string prodDesc, string prodImage, decimal discount, string status)
+        public Product(string prodID, string prodName, decimal prodPrice, string prodDesc, string prodImage, decimal discount, string status, int stocklevel)
         {
             _prodID = prodID;
             _prodName = prodName;
@@ -39,17 +40,18 @@ namespace BIPJ_Grp2_Team5
             _prodImage = prodImage;
             _discount = discount;
             _status = status;
+            _stklvl = stocklevel;
         }
 
         // Constructor that take in all except product ID
-        public Product(string prodName, decimal prodPrice, string prodDesc, string prodImage, decimal discount, string status)
-            : this(null, prodName, prodPrice, prodDesc, prodImage, discount, status)
+        public Product(string prodName, decimal prodPrice, string prodDesc, string prodImage, decimal discount, string status, int stocklevel)
+            : this(null, prodName, prodPrice, prodDesc, prodImage, discount, status, stocklevel)
         {
         }
 
         // Constructor that take in only Product ID. The other attributes will be set to 0 or empty.
         public Product(string prodID)
-            : this(prodID, "", 0, "", "", 0, "")
+            : this(prodID, "", 0, "", "", 0, "", 0)
         {
         }
 
@@ -91,6 +93,11 @@ namespace BIPJ_Grp2_Team5
             get { return _status; }
             set { _status = value; }
         }
+        public int Stock_Lvl
+        {
+            get { return _stklvl; }
+            set { _stklvl = value; }
+        }
 
         //Below as the Class methods for some DB operations. 
         public Product getProduct(string prodID)
@@ -100,6 +107,7 @@ namespace BIPJ_Grp2_Team5
 
             string prod_Name, prod_Desc, prod_Image, status;
             decimal prod_Price, discount;
+            int stocklevel;
 
             string queryStr = "SELECT * FROM Products WHERE Product_ID = @ProdID";
 
@@ -118,8 +126,9 @@ namespace BIPJ_Grp2_Team5
                 prod_Image = dr["Product_Img"].ToString();
                 discount = decimal.Parse(dr["Discount"].ToString());
                 status = dr["Status"].ToString();
+                stocklevel = int.Parse(dr["Stock_Lvl"].ToString());
 
-                prodDetail = new Product(prodID, prod_Name, prod_Price, prod_Desc, prod_Image, discount, status);
+                prodDetail = new Product(prodID, prod_Name, prod_Price, prod_Desc, prod_Image, discount, status, stocklevel);
             }
             else
             {
@@ -139,6 +148,7 @@ namespace BIPJ_Grp2_Team5
 
             string prod_ID, prod_Name, prod_Desc, prod_Image, status;
             decimal prod_Price, discount;
+            int stklvl;
 
             string queryStr = "SELECT * FROM Products Order By Product_ID";
 
@@ -157,7 +167,8 @@ namespace BIPJ_Grp2_Team5
                 prod_Image = dr["Product_Img"].ToString();
                 discount = decimal.Parse(dr["Discount"].ToString());
                 status = dr["Status"].ToString();
-                Product a = new Product(prod_ID, prod_Name, prod_Price, prod_Desc, prod_Image, discount, status);
+                stklvl = int.Parse(dr["Stock_Lvl"].ToString());
+                Product a = new Product(prod_ID, prod_Name, prod_Price, prod_Desc, prod_Image, discount, status, stklvl);
                 prodList.Add(a);
             }
 
@@ -173,9 +184,8 @@ namespace BIPJ_Grp2_Team5
             // string msg = null;
             int result = 0;
 
-            string queryStr = "INSERT INTO Products(Product_ID, Product_Name, Product_Price, Product_Desc, Product_Img, Discount, Status)"
-                + " values (@Product_ID,@Product_Name, @Product_Price, @Product_Desc, @Product_Image, @Discount, @Status)";
-            //+ "values (@Product_ID,@Product_Name, @Product_Price, @Product_Desc, @Product_Image, @Stock_Level, @Discount)";
+            string queryStr = "INSERT INTO Products(Product_ID, Product_Name, Product_Price, Product_Desc, Product_Img, Discount, Status, Stock_Lvl)"
+                + " values (@Product_ID,@Product_Name, @Product_Price, @Product_Desc, @Product_Image, @Discount, @Status, @StkLvl)";
 
             SqlConnection conn = new SqlConnection(_connStr);
             SqlCommand cmd = new SqlCommand(queryStr, conn);
@@ -186,6 +196,7 @@ namespace BIPJ_Grp2_Team5
             cmd.Parameters.AddWithValue("@Product_Image", this.Product_Image);
             cmd.Parameters.AddWithValue("@Discount", this.Discount);
             cmd.Parameters.AddWithValue("@Status", "Not In Stock");
+            cmd.Parameters.AddWithValue("@StkLvl", 0);
 
             conn.Open();
             result += cmd.ExecuteNonQuery(); // Returns no. of rows affected. Must be > 0

@@ -155,7 +155,7 @@
                     <asp:BoundField DataField="Product_Name" HeaderText="Name" SortExpression="Product_Name" />
                     <asp:BoundField DataField="Product_Price" HeaderText="Price" SortExpression="Product_Price" />
                     <asp:BoundField DataField="Discount" HeaderText="Discount" />
-                    <asp:BoundField HeaderText="Stock" />
+                    <asp:BoundField HeaderText="Stock" DataField="Stock_Lvl" />
                     <asp:TemplateField HeaderText="Status">
                         <ItemTemplate>
                             <asp:Button ID="btn_Status" runat="server" CommandArgument='<%# Eval("Product_ID") %>' CommandName='<%# Eval("Status") %>' ForeColor='<%# Eval("Status").ToString()=="In Stock"?System.Drawing.Color.Green:System.Drawing.Color.Red %>' OnClick="btn_Status_Click" text="" />
