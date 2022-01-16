@@ -48,6 +48,21 @@
             text-align: center;
             font-size: large;
         }
+        .auto-style24 {
+            text-decoration: underline;
+        }
+        .labelstrike{
+            text-decoration-line: line-through;
+        }
+        .nolabelstrike{
+            text-decoration-line: none;
+        }
+        .lblDiscCss{
+            background-color: green;
+            color: white;
+            padding-left:2px;
+            padding-right:2px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -64,7 +79,7 @@
         <tr>
             <td class="auto-style21">
                 <asp:LinkButton ID="Link_Shop" runat="server" OnClick="Link_Product_Click" CssClass="auto-style9">Shop</asp:LinkButton>
-                <span class="auto-style9">&nbsp;&gt;</span><span class="auto-style28"><strong><span class="auto-style9"> View Product</span></strong></span></td>
+                <span class="auto-style9">&nbsp;&gt;</span><span class="auto-style28"><strong><span class="auto-style9"> <span class="auto-style24">View Product</span></span></strong></span></td>
             <td colspan="2">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -96,13 +111,15 @@
             <td class="auto-style19">Product Price ($)</td>
             <td class="auto-style14">
                 <asp:Label ID="lbl_prodPrice" runat="server" Text="Label"></asp:Label>
+            &nbsp;<asp:Label ID="lbl_DiscPrice" runat="server" Text="Label"></asp:Label>
+            &nbsp;
+                <asp:Label ID="lbl_Discount" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr class="auto-style8">
-            <td class="auto-style19">Product Discount (%)</td>
+            <td class="auto-style19">&nbsp;</td>
             <td class="auto-style14">
-                <asp:Label ID="lbl_Discount" runat="server" Text="Label"></asp:Label>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style19">Status</td>

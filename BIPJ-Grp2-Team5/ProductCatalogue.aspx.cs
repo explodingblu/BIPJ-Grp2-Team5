@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
+using Button = System.Web.UI.WebControls.Button;
+using Label = System.Web.UI.WebControls.Label;
 
 namespace BIPJ_Grp2_Team5
 {
@@ -151,6 +155,29 @@ namespace BIPJ_Grp2_Team5
         {
             foreach (DataListItem item in DL_ProdCat.Items)
             {
+                Label itemlbl = (Label)item.FindControl("lbl_Disc");
+                Label pricelbl = (Label)item.FindControl("lbl_Price");
+                Label discpricelbl = (Label)item.FindControl("lbl_DiscPrice");
+                double pricenum = Convert.ToDouble(pricelbl.Text);
+                double discnum = Convert.ToDouble(itemlbl.Text);
+                if (discnum > 0)
+                {
+                    itemlbl.Visible = true;
+                    pricelbl.CssClass = "labelstrike";
+                    double disccalc = (100 - discnum) / 100;
+                    double discprice = Math.Round((pricenum * disccalc), 2);
+                    itemlbl.Text = "-" + itemlbl.Text + "% Off";
+                    discpricelbl.Text = discprice.ToString();
+                    itemlbl.CssClass = "DiscCss";
+                    discpricelbl.Visible = true;
+                }
+                else
+                {
+                    itemlbl.Visible = false;
+                    pricelbl.CssClass = "nolabelstrike";
+                    discpricelbl.Visible = false;
+                }
+                
             }
         }
     }

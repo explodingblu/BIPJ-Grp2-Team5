@@ -5,6 +5,7 @@
             width: 307px;
             height: 66px;
             font-size: medium;
+            text-decoration: underline;
         }
         .auto-style10 {
             text-align: center;
@@ -31,6 +32,19 @@
         }
         #Btn_Cart {
             width: 75px;
+        }
+        .labelstrike{
+            text-decoration-line: line-through;
+        }
+        .nolabelstrike{
+            text-decoration-line: none;
+        }
+        .DiscCss{
+            background-color: green;
+            color: white;
+            font-size: 20px;
+            padding-left:2px;
+            padding-right:2px;
         }
         </style>
 </asp:Content>
@@ -65,8 +79,9 @@
                        <ItemTemplate>
                            <table>
                                <tr>
-                                   <td>Discount</td>
-                                   <td><%#Eval("Discount") %></td>
+                                   <td class="text-center" colspan="2">
+                                       <asp:Label ID="lbl_Disc" runat="server" Text='<%#Eval("Discount") %>'></asp:Label>
+                                   </td>
                                </tr>
                                <tr>
                                    <td colspan="2">
@@ -85,7 +100,7 @@
                                </tr>
                                <tr>
                                    <td>Price</td>
-                                   <td><%#Eval("Product_Price") %><asp:Label ID="lbl_DiscPrice" runat="server" Text="Label"></asp:Label></td>
+                                   <td>$<asp:Label ID="lbl_Price" runat="server" Text='<%#Eval("Product_Price") %>'></asp:Label> <asp:Label ID="lbl_DiscPrice" runat="server" Text="Label"></asp:Label></td>
                                </tr>
                                <tr>
                                    <td>Status</td>
@@ -93,10 +108,10 @@
                                </tr>
                                <tr>
                                    <td>
-                                       <asp:Button ID="Btn_View" runat="server" CommandName="ViewBtn" Text="View" Width="50px" />
+                                       <asp:Button ID="Btn_View" runat="server" CommandName="ViewBtn" Text="View" Width="55px" />
                                    </td>
                                    <td>
-                                       <asp:Button ID="Btn_Cart" runat="server" CommandName="CartBtn" Text="Cart" Width="50px" />
+                                       <asp:Button ID="Btn_Cart" runat="server" CommandName="CartBtn" Text="Cart" Width="55px" />
                                    </td>                          
                                </tr>
                            </table>

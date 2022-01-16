@@ -78,6 +78,15 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.Label lbl_prodPrice;
 
         /// <summary>
+        /// lbl_DiscPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_DiscPrice;
+
+        /// <summary>
         /// lbl_Discount control.
         /// </summary>
         /// <remarks>

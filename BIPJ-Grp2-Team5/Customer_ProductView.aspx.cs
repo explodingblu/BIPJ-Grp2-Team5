@@ -21,6 +21,25 @@ namespace BIPJ_Grp2_Team5
                 lbl_prodDesc.Text = prod.Product_Desc;
                 lbl_prodPrice.Text = prod.Product_Price.ToString("c");
                 lbl_Discount.Text = prod.Discount.ToString("c");
+
+                if (prod.Discount > 0)
+                {
+                    lbl_Discount.Visible = true;
+                    lbl_prodPrice.CssClass = "labelstrike";
+                    decimal disccalc = (100 - prod.Discount) / 100;
+                    decimal discprice = Math.Round((prod.Product_Price * disccalc), 2);
+                    lbl_Discount.Text = "-" + lbl_Discount.Text + "% Off";
+                    lbl_DiscPrice.Text = discprice.ToString();
+                    lbl_Discount.CssClass = "lblDiscCss";
+                    lbl_DiscPrice.Visible = true;
+                }
+                else
+                {
+                    lbl_Discount.Visible = false;
+                    lbl_prodPrice.CssClass = "nolabelstrike";
+                    lbl_DiscPrice.Visible = false;
+                }
+
                 lbl_status.Text = prod.Status;
                 img_prodImg.ImageUrl = "~\\images\\" + prod.Product_Image;
 
