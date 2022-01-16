@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BIPJ_Grp2_Team5
 {
@@ -177,6 +180,29 @@ namespace BIPJ_Grp2_Team5
 
         }
 
+        protected void gv_OrderSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        protected void btn_search_Click(object sender, EventArgs e)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["MainDBContext"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand();
+            string sqlquery = "select * from Orders where Order_ID like '%'+@Order_ID+'%' ";
+            sqlcomm.CommandText = sqlquery;
+            sqlcomm.Connection = sqlconn;
+            sqlcomm.Parameters.AddWithValue("@Order_ID", tb_search.Text);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            sda.Fill(dt);
+            gv_OrderSearch.DataSource = dt;
+            gv_OrderSearch.DataBind();
+
+            sqlconn.Close();
+            tb_search.Text = "";
+        }
     }
 }

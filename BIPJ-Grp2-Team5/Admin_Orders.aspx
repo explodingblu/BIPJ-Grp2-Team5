@@ -19,7 +19,8 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="main" style="left: 1px; top: 0px">
+    <div class="main" sty
+		le="left: 1px; top: 0px">
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
@@ -60,6 +61,46 @@
 							<!-- END INPUTS -->
 						
 						</div>
+						<div class="col-md-6">
+                                <!-- BORDERED TABLE -->
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Orders Search Table</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="auto-style1">
+                                        <tr>
+                                            <td>Search ID: </td>
+                                            <td>
+                                                <asp:TextBox ID="tb_search" runat="server"></asp:TextBox>
+                                                <asp:Button ID="btn_search" runat="server" OnClick="btn_search_Click" Text="Search" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+
+                                    <asp:GridView ID="gv_OrderSearch" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gv_OrderSearch_SelectedIndexChanged" class="table table-bordered" DataKeyNames="Order_ID" OnRowDeleting="Gv_Orders_RowDeleting" EmptyDataText="Theres Nothing Inside!">
+                                        <Columns>
+                                            <asp:BoundField HeaderText="OrderID" DataField="Order_ID" />
+                                            <asp:BoundField HeaderText="FirstName" DataField="FName" />
+                                            <asp:BoundField HeaderText="LastName" DataField="LName" />
+                                            <asp:BoundField HeaderText="PhoneNo"  DataField="PhoneNo"/>
+                                            <asp:BoundField DataField="Product" HeaderText="Products" />
+                                            <asp:BoundField HeaderText="Total Amount" DataField="TotalAmount"/>
+											<asp:BoundField HeaderText="Payment Date" DataField="PaymentDate"/>
+											<asp:BoundField DataField="DeliveryStatus" HeaderText="Delivery Status" />
+                                            <asp:TemplateField ShowHeader="False">
+                                                <ItemTemplate>
+                                                    <asp:Button ID="Button1" runat="server" CausesValidation="False" CommandName="Select" Text="Select" />
+                                                    <asp:Button ID="Button2" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"/>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+                                </div>
+                            </div>
+                            <!-- END BORDERED TABLE -->
+                        </div>
 
 						</div>
 								<!-- BORDERED TABLE -->
