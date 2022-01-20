@@ -12,21 +12,19 @@
 							<!-- INPUTS -->
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Update Repair Form</h3>
+									<h3 class="panel-title">Manufacturing Form</h3>
 								</div>
 
 								<div class="panel-body">
 
-									<p>Repair ID: <asp:Label ID="lbl_repairid" runat="server"></asp:Label> </p>
-									<p>Name: <asp:Label ID="lbl_name" runat="server"></asp:Label></p>									
-									<p>Handphone Number: <asp:Label ID="lbl_Hp" runat="server"></asp:Label></p>									
-									<p>Email: <asp:Label ID="lbl_Email" runat="server"></asp:Label></p>									
-									<p>Subject: <asp:Label ID="lbl_Subject" runat="server"></asp:Label></p>
-									<p>Comments: </p><p><asp:Label ID="lbl_Comments" runat="server"></asp:Label></p>
+									<p>Manufacturing  ID: <asp:Label ID="lbl_manufacturingid" runat="server"></asp:Label> </p>
+									<p>Order ID: <asp:Label ID="lbl_Order_ID" runat="server"></asp:Label></p>									
+									<p>Product Info: <asp:Label ID="lbl_Prodinfo" runat="server"></asp:Label></p>									
+									<p>Quantity: <asp:Label ID="lbl_Quantity" runat="server"></asp:Label></p>
 									<p>Status: <asp:Label ID="lbl_Status" runat="server"></asp:Label></p>
 									<asp:RadioButtonList ID="rbl_status" runat="server" OnSelectedIndexChanged="rbl_status_SelectedIndexChanged">
-                                        <asp:ListItem>Open</asp:ListItem>
-                                        <asp:ListItem>Closed</asp:ListItem>
+                                        <asp:ListItem>Approved</asp:ListItem>
+                                        <asp:ListItem>Rejected</asp:ListItem>
                                     </asp:RadioButtonList>
                                     <br />
                                     <asp:Button ID="btn_submitUp" runat="server"  Text="Submit" OnClick="btn_submitUp_Click" />
@@ -39,7 +37,7 @@
 								<!-- BORDERED TABLE -->
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Repairs Table</h3>
+									<h3 class="panel-title">Manufacturing Data Table</h3>
 								</div>
 								<div class="panel-body">
 									<table class="nav-justified">
@@ -52,15 +50,16 @@
                                  </tr>
                              </table>
                         <br />
-									<asp:GridView ID="gvRepair" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gvRepair_SelectedIndexChanged" DataKeyNames="Repair_ID" class="table table-bordered" OnRowDeleting="gvRepair_RowDeleting" EmptyDataText="Theres Nothing Inside!">
+									<asp:GridView ID="gvManufacture" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gvManufacture_SelectedIndexChanged" DataKeyNames="Manufacturing_ID" class="table table-bordered" EmptyDataText="Theres Nothing Inside!">
                                         <Columns>
-                                            <asp:BoundField HeaderText="RepairID" DataField="Repair_ID" />
-                                            <asp:BoundField HeaderText="Name" DataField="Name" />
-                                            <asp:BoundField HeaderText="Hp" DataField="Hp" />
-                                            <asp:BoundField HeaderText="Email" DataField="Email" />
-                                            <asp:BoundField HeaderText="Subject"  DataField="Subject"/>
-                                            <asp:BoundField HeaderText="Comments" DataField="Comments"/>
+                                            <asp:BoundField HeaderText="ManufacturingID" DataField="Manufacturing_ID" />
+                                            <asp:BoundField HeaderText="Order" DataField="Order_ID" />
+                                            <asp:BoundField HeaderText="Product Info" DataField="Product_Info" />
+                                            <asp:BoundField HeaderText="Quantity" DataField="Quantity" />
                                             <asp:BoundField HeaderText="Status" DataField="Status"/>
+                                             <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Image" DataImageUrlFormatString="~\Images\{0}" ControlStyle-Width="100" ControlStyle-Height = "100">
+                                                <ControlStyle Height="100px" Width="100px" />
+                                            </asp:ImageField>
                                             <asp:TemplateField ShowHeader="False">
                                                 <ItemTemplate>
                                                     <asp:Button ID="Button1" runat="server" CausesValidation="False" CommandName="Select" Text="Select" />
@@ -75,7 +74,7 @@
 						</div>
 						<table class="nav-justified">
                                         <tr>
-                                            <td>Filter Status</td>
+                                            <td>Filter Status</td> 
                                             <td>
                                                 <asp:DropDownList ID="ddl_status" runat="server" DataSourceID="SqlDataSource2" DataTextField="Status" DataValueField="Status">
                                                 </asp:DropDownList>
@@ -83,22 +82,23 @@
                                             </td>
                                         </tr>
                                     </table>
-                                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:JextechDBContext %>" SelectCommand="SELECT DISTINCT * FROM [Repair] WHERE ([Status] = @Status)">
+                                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MainDBContext %>" SelectCommand="SELECT DISTINCT * FROM [Manufacturing] WHERE ([Status] = @Status)">
                                         <SelectParameters>
                                             <asp:ControlParameter ControlID="ddl_status" Name="Status" PropertyName="SelectedValue" Type="String" />
                                         </SelectParameters>
                                     </asp:SqlDataSource>
-                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:JextechDBContext %>" SelectCommand="SELECT DISTINCT [Status] FROM [Repair]"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MainDBContext %>" SelectCommand="SELECT DISTINCT [Status] FROM [Manufacturing]"></asp:SqlDataSource>
                                     <br />
-                                   <asp:GridView ID="gv_openclose" runat="server" AutoGenerateColumns="False"  class="table table-bordered" DataKeyNames="Repair_ID"  DataSourceID="SqlDataSource1">
+                                   <asp:GridView ID="gv_openclose" runat="server" AutoGenerateColumns="False"  class="table table-bordered" DataKeyNames="Manufacturing_ID"  DataSourceID="SqlDataSource1">
                                         <Columns>
-                                             <asp:BoundField HeaderText="RepairID" DataField="Repair_ID" />
-                                            <asp:BoundField HeaderText="Name" DataField="Name" />
-                                            <asp:BoundField HeaderText="Hp" DataField="Hp" />
-                                            <asp:BoundField HeaderText="Email" DataField="Email" />
-                                            <asp:BoundField HeaderText="Subject"  DataField="Subject"/>
-                                            <asp:BoundField HeaderText="Comments" DataField="Comments"/>
+                                            <asp:BoundField HeaderText="ManufacturingID" DataField="Manufacturing_ID" />
+                                            <asp:BoundField HeaderText="Order" DataField="Order_ID" />
+                                            <asp:BoundField HeaderText="Product Info" DataField="Product_Info" />
+                                            <asp:BoundField HeaderText="Quantity" DataField="Quantity" />
                                             <asp:BoundField HeaderText="Status" DataField="Status"/>
+                                             <asp:ImageField HeaderText="Image" DataImageUrlField="Product_Img" DataImageUrlFormatString="~\images\{0}" ControlStyle-Width="100" ControlStyle-Height = "100">
+                                                <ControlStyle Height="100px" Width="100px" />
+                                            </asp:ImageField>
                                         </Columns>
                                     </asp:GridView>
 						</div>

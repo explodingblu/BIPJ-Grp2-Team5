@@ -13,5 +13,14 @@ namespace BIPJ_Grp2_Team5
 
     public partial class Admin_Delivery
     {
+
+        /// <summary>
+        /// Gv_Delivery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Gv_Delivery;
     }
 }

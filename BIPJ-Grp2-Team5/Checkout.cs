@@ -324,6 +324,51 @@ namespace BIPJ_Grp2_Team5
             }
 
         }//end Update
+        public List<Checkout> getdeliveredOrders()
+        {
+            List<Checkout> checkoutList = new List<Checkout>();
+
+            string FName, LName, Country, City, Address, Zipcode, PhoneNo, Comment, PaymentDate, CardNumber, Product, DeliveryStatus;
+            decimal TotalAmount;
+            int Order_ID;
+
+
+            string queryStr = "SELECT Order_ID, FName, LName, Country, City, Address, Zipcode, PhoneNo, Comment, Product, TotalAmount, PaymentDate, CardNumber, DeliveryStatus" +
+                 " FROM Orders WHERE DeliveryStatus = 'In Transit' Order By PaymentDate DESC";
+
+            SqlConnection conn = new SqlConnection(_connStr);
+            SqlCommand cmd = new SqlCommand(queryStr, conn);
+
+            conn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Order_ID = int.Parse(dr["Order_ID"].ToString());
+                FName = dr["Fname"].ToString();
+                LName = dr["LName"].ToString();
+                Country = dr["Country"].ToString();
+                City = dr["City"].ToString();
+                Address = dr["Address"].ToString();
+                Zipcode = dr["Zipcode"].ToString();
+                PhoneNo = dr["PhoneNo"].ToString();
+                Comment = dr["Comment"].ToString();
+                Product = dr["Product"].ToString();
+                TotalAmount = decimal.Parse(dr["TotalAmount"].ToString());
+                PaymentDate = dr["PaymentDate"].ToString();
+                CardNumber = dr["CardNumber"].ToString();
+                DeliveryStatus = dr["DeliveryStatus"].ToString();
+                Checkout a = new Checkout(Order_ID, FName, LName, Country, City, Address, Zipcode, PhoneNo, Comment, Product, TotalAmount, PaymentDate, CardNumber, DeliveryStatus);
+                checkoutList.Add(a);
+            }
+
+            conn.Close();
+            dr.Close();
+            dr.Dispose();
+
+            return checkoutList;
+
+        }
 
         //public List<Checkout> getOwnCheckout(string name, string password)
         //{
