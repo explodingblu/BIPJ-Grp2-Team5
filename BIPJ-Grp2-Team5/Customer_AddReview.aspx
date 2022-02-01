@@ -37,6 +37,15 @@
                     </asp:DropDownList>
                 </td>
                 <td>Star Rating:&nbsp;
+                    <asp:ImageButton ID="ImgBtn_1" runat="server" Height="50px" OnClick="ImgBtn_1_Click" Width="50px" />
+&nbsp;
+                    <asp:ImageButton ID="ImgBtn_2" runat="server" Height="50px" OnClick="ImgBtn_2_Click" Width="50px" />
+&nbsp;
+                    <asp:ImageButton ID="ImgBtn_3" runat="server" Height="50px" OnClick="ImgBtn_3_Click" Width="50px" />
+&nbsp;
+                    <asp:ImageButton ID="ImgBtn_4" runat="server" Height="50px" OnClick="ImgBtn_4_Click" Width="50px" />
+&nbsp;
+                    <asp:ImageButton ID="ImgBtn_5" runat="server" Height="50px" OnClick="ImgBtn_5_Click" Width="50px" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

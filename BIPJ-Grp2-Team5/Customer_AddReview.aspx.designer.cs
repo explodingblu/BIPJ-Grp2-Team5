@@ -33,6 +33,51 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.DropDownList DDL_Product;
 
         /// <summary>
+        /// ImgBtn_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_1;
+
+        /// <summary>
+        /// ImgBtn_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_2;
+
+        /// <summary>
+        /// ImgBtn_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_3;
+
+        /// <summary>
+        /// ImgBtn_4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_4;
+
+        /// <summary>
+        /// ImgBtn_5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_5;
+
+        /// <summary>
         /// tb_Comment control.
         /// </summary>
         /// <remarks>
