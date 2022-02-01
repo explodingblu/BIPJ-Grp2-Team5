@@ -5,7 +5,8 @@
     .auto-style5 {
         width: 100%;
         height: 471px;
-    }
+            margin-right: 1px;
+        }
     .auto-style6 {
         height: 121px;
     }
@@ -19,7 +20,7 @@
     }
     .auto-style8 {
             height: 121px;
-            width: 8394px;
+            width: 8815px;
         }
     .auto-style10 {
         width: 765px;
@@ -33,7 +34,7 @@
         height: 193px;
     }
     .auto-style14 {
-        width: 8394px;
+        width: 8815px;
         height: 193px;
         text-align: center;
     }
@@ -49,7 +50,7 @@
             width: 765px;
         }
         .auto-style18 {
-            width: 8394px;
+            width: 8815px;
             height: 25px;
             font-size: medium;
         }
@@ -78,7 +79,7 @@
             text-align: center;
         }
         .auto-style25 {
-            width: 8394px;
+            width: 8815px;
             height: 26px;
             text-align: center;
         }
@@ -98,7 +99,7 @@
             width: 765px;
         }
         .auto-style29 {
-            width: 8394px
+            width: 8815px
         }
         .auto-style30 {
             height: 25px;
@@ -155,13 +156,14 @@
     <tr>
         <td class="auto-style21"></td>
         <td class="auto-style18"></td>
-        <td class="auto-style17" colspan="2"><strong>Products</strong></td>
+        <td class="auto-style17" colspan="2"><strong>&nbsp;Products</strong></td>
         <td class="auto-style19"></td>
     </tr>
     <tr>
         <td class="auto-style21">&nbsp;</td>
         <td class="auto-style18">&nbsp;</td>
         <td class="auto-style30">
+            &nbsp;
             <asp:ImageButton ID="ImgBtn_Refresh" runat="server" Height="35px" ImageUrl="~/Images/Refresh.jpeg" OnClick="ImgBtn_Refresh_Click" Width="35px" />
         </td>
         <td class="auto-style28">Search By ID:&nbsp;
@@ -172,7 +174,7 @@
     </tr>
     <tr>
         <td class="auto-style22">&nbsp;</td>
-        <td class="auto-style14"></td>
+        <td class="auto-style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
         <td class="auto-style12" colspan="2">
             <asp:GridView ID="gvProduct" runat="server" Width="1250px" AutoGenerateColumns="False" CssClass="auto-style15" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" OnRowDeleting="gvProduct_RowDeleting" DataKeyNames="Product_ID" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnSorting="gvProduct_Sorting" onrowdatabound="gvProduct_RowDataBound" AllowPaging="True">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
