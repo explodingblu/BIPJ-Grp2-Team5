@@ -134,6 +134,7 @@
     <Content Include="css\isotope\style.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
+    <Content Include="Customer_AddReview.aspx" />
     <Content Include="Customer_Main.aspx" />
     <Content Include="Customer_ProductView.aspx" />
     <Content Include="Customization.aspx" />
@@ -331,6 +332,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Customer_AddReview.aspx.cs">
+      <DependentUpon>Customer_AddReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_AddReview.aspx.designer.cs">
+      <DependentUpon>Customer_AddReview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Education.cs" />
     <Compile Include="Customer_Main.aspx.cs">
       <DependentUpon>Customer_Main.aspx</DependentUpon>
