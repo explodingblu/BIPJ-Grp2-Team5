@@ -33,16 +33,6 @@
             .auto-style27 {
                 height: 102px;
             }
-            .auto-style30 {
-                font-size: medium;
-                height: 60px;
-                width: 509px;
-            }
-            .auto-style34 {
-                font-size: medium;
-                height: 40px;
-                width: 509px;
-            }
             .auto-style37 {
                 font-size: medium;
                 text-align: left;
@@ -149,8 +139,16 @@
             <td class="auto-style45" colspan="3">
                 <asp:Image ID="img_prodImg" runat="server" Height="175px" Width="175px" />
             </td>
-            <td class="auto-style47">
-                &nbsp;</td>
+            <td class="auto-style47" rowspan="6">
+                <asp:GridView ID="gv_ProdReview" runat="server" AutoGenerateColumns="False" Width="308px">
+                    <Columns>
+                        <asp:BoundField DataField="Review_ID" HeaderText="ID" />
+                        <asp:BoundField DataField="Product_Rating" HeaderText="Rating" />
+                        <asp:BoundField DataField="Product_Comment" HeaderText="Comment" />
+                        <asp:BoundField DataField="Customer_ID" HeaderText="By Customer ID" />
+                    </Columns>
+                </asp:GridView>
+            </td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
@@ -158,8 +156,6 @@
             <td class="auto-style49">
                 <asp:Label ID="lbl_prodID" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style47">
-                &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
@@ -167,8 +163,6 @@
             <td class="auto-style49">
                 <asp:Label ID="lbl_prodName" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style47">
-                &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
@@ -176,8 +170,6 @@
             <td class="auto-style50">
                 <asp:Label ID="lbl_prodDesc" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style30">
-                </td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
@@ -185,8 +177,6 @@
             <td class="auto-style51">
                 <asp:Label ID="lbl_prodPrice" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style34">
-                </td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style37" colspan="2">
@@ -194,8 +184,6 @@
             <td class="auto-style49">
                 <asp:Label ID="lbl_Discount" runat="server" Text="Label"></asp:Label>
             </td>
-            <td class="auto-style47">
-                &nbsp;</td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style42">

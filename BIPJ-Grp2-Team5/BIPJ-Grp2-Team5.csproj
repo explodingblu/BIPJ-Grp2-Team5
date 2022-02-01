@@ -135,6 +135,7 @@
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
     <Content Include="Customer_AddReview.aspx" />
+    <Content Include="Customer_AllReview.aspx" />
     <Content Include="Customer_Main.aspx" />
     <Content Include="Customer_ProductView.aspx" />
     <Content Include="Customization.aspx" />
@@ -351,6 +352,13 @@
     </Compile>
     <Compile Include="Customer_AddReview.aspx.designer.cs">
       <DependentUpon>Customer_AddReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_AllReview.aspx.cs">
+      <DependentUpon>Customer_AllReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_AllReview.aspx.designer.cs">
+      <DependentUpon>Customer_AllReview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Education.cs" />
     <Compile Include="Customer_Main.aspx.cs">
