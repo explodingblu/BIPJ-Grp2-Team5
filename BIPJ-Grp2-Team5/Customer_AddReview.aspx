@@ -1,8 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer_Navbar.Master" AutoEventWireup="true" CodeBehind="Customer_AddReview.aspx.cs" Inherits="BIPJ_Grp2_Team5.Customer_AddReview" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style2 {
+            width: 100%;
+            height: 400px;
+        }
+        .auto-style3 {
+            height: 67px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<form id="form1" runat="server">
+    <form id="form1" runat="server">
         <table class="auto-style2">
             <tr>
                 <td>&nbsp;</td>
@@ -27,7 +36,7 @@
                     <asp:DropDownList ID="DDL_Product" runat="server" AutoPostBack="True">
                     </asp:DropDownList>
                 </td>
-                <td>Star Rating:
+                <td>Star Rating:&nbsp;
                 </td>
                 <td>&nbsp;</td>
             </tr>

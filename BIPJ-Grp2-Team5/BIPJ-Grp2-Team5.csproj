@@ -161,8 +161,20 @@
     <Content Include="Education.aspx" />
     <Content Include="Admin_Education.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
+    <Content Include="Images\Biodegradable Vacuum Cleaner.jpg" />
+    <Content Include="Images\EmptyStarRating.jpeg" />
+    <Content Include="Images\FullStarRating.jpeg" />
+    <Content Include="Images\Logo.jpeg" />
+    <Content Include="Images\lunchybox.png" />
+    <Content Include="Images\lunchybox2.png" />
+    <Content Include="Images\Recycled Chandelier.jpg" />
+    <Content Include="Images\Recycled Chess Set.jpg" />
+    <Content Include="Images\Recycled Glass Tiles.jpg" />
+    <Content Include="Images\Recycled Tupperware.jfif" />
     <Content Include="Images\Refresh.jpeg" />
+    <Content Include="Images\Terrarium Lampshade.jpg" />
+    <Content Include="Images\Tote Bag.png" />
+    <Content Include="Images\Wind Chime.jpg" />
     <Content Include="img\air_pollutuon.jpg" />
     <Content Include="img\audiojungle.png" />
     <Content Include="img\cliemate.jpg" />
@@ -208,6 +220,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\klorofil-common.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -378,7 +391,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Orders.cs" />
+    <Compile Include="Checkout.cs" />
+    <Compile Include="Manufacturing.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductCatalogue.aspx.cs">
       <DependentUpon>ProductCatalogue.aspx</DependentUpon>
@@ -388,6 +402,7 @@
       <DependentUpon>ProductCatalogue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Review.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
