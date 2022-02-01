@@ -106,7 +106,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddReview.aspx" />
     <Content Include="Admin_Delivery.aspx" />
     <Content Include="Admin_Index.aspx" />
     <Content Include="Admin_Manufacturing.aspx" />
@@ -161,19 +160,8 @@
     <Content Include="Education.aspx" />
     <Content Include="Admin_Education.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Images\Biodegradable Vacuum Cleaner.jpg" />
-    <Content Include="Images\EmptyStarRating.jpeg" />
-    <Content Include="Images\FullStarRating.jpeg" />
     <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
-    <Content Include="Images\Logo.jpeg" />
-    <Content Include="Images\Recycled Chandelier.jpg" />
-    <Content Include="Images\Recycled Chess Set.jpg" />
-    <Content Include="Images\Recycled Glass Tiles.jpg" />
-    <Content Include="Images\Recycled Tupperware.jfif" />
     <Content Include="Images\Refresh.jpeg" />
-    <Content Include="Images\Terrarium Lampshade.jpg" />
-    <Content Include="Images\Tote Bag.png" />
-    <Content Include="Images\Wind Chime.jpg" />
     <Content Include="img\air_pollutuon.jpg" />
     <Content Include="img\audiojungle.png" />
     <Content Include="img\cliemate.jpg" />
@@ -278,13 +266,6 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddReview.aspx.cs">
-      <DependentUpon>AddReview.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddReview.aspx.designer.cs">
-      <DependentUpon>AddReview.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin_Delivery.aspx.cs">
       <DependentUpon>Admin_Delivery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -399,7 +380,6 @@
       <DependentUpon>ProductCatalogue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Review.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
