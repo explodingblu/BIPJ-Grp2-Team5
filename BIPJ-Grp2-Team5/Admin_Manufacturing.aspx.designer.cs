@@ -15,40 +15,58 @@ namespace BIPJ_Grp2_Team5
     {
 
         /// <summary>
-        /// lbl_manufacturingid control.
+        /// lbl_repairid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_manufacturingid;
+        protected global::System.Web.UI.WebControls.Label lbl_repairid;
 
         /// <summary>
-        /// lbl_Order_ID control.
+        /// lbl_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Order_ID;
+        protected global::System.Web.UI.WebControls.Label lbl_name;
 
         /// <summary>
-        /// lbl_Prodinfo control.
+        /// lbl_Hp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Prodinfo;
+        protected global::System.Web.UI.WebControls.Label lbl_Hp;
 
         /// <summary>
-        /// lbl_Quantity control.
+        /// lbl_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Quantity;
+        protected global::System.Web.UI.WebControls.Label lbl_Email;
+
+        /// <summary>
+        /// lbl_Subject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Subject;
+
+        /// <summary>
+        /// lbl_Comments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Comments;
 
         /// <summary>
         /// lbl_Status control.
@@ -96,13 +114,13 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.Button btn_search;
 
         /// <summary>
-        /// gvManufacture control.
+        /// gvRepair control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvManufacture;
+        protected global::System.Web.UI.WebControls.GridView gvRepair;
 
         /// <summary>
         /// ddl_status control.
