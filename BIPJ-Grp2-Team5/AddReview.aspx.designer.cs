@@ -33,51 +33,6 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.DropDownList DDL_Product;
 
         /// <summary>
-        /// ImgBtn_Rating1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_Rating1;
-
-        /// <summary>
-        /// ImgBtn_Rating2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_Rating2;
-
-        /// <summary>
-        /// ImgBtn_Rating3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_Rating3;
-
-        /// <summary>
-        /// ImgBtn_Rating4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_Rating4;
-
-        /// <summary>
-        /// ImgBtn_Rating5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImgBtn_Rating5;
-
-        /// <summary>
         /// tb_Comment control.
         /// </summary>
         /// <remarks>

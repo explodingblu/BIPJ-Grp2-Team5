@@ -37,12 +37,7 @@
                     <asp:DropDownList ID="DDL_Product" runat="server" AutoPostBack="True">
                     </asp:DropDownList>
                 </td>
-                <td>Star Rating:
-                    <asp:ImageButton ID="ImgBtn_Rating1" runat="server" Height="45px" OnClick="ImgBtn_Rating1_Click" Width="51px" />
-&nbsp;<asp:ImageButton ID="ImgBtn_Rating2" runat="server" Height="45px" OnClick="ImgBtn_Rating2_Click" Width="51px" />
-&nbsp;<asp:ImageButton ID="ImgBtn_Rating3" runat="server" Height="45px" OnClick="ImgBtn_Rating3_Click" Width="51px" />
-&nbsp;<asp:ImageButton ID="ImgBtn_Rating4" runat="server" Height="45px" OnClick="ImgBtn_Rating4_Click" Width="51px" />
-&nbsp;<asp:ImageButton ID="ImgBtn_Rating5" runat="server" Height="45px" OnClick="ImgBtn_Rating5_Click" Width="51px" />
+                <td>Star Rating:&nbsp;
                 </td>
                 <td>&nbsp;</td>
             </tr>
