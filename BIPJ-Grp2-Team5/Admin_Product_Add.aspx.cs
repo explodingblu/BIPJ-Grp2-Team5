@@ -41,10 +41,17 @@ namespace BIPJ_Grp2_Team5
                     //loadProductInfo();
                     //loadProduct();
                     //clear1();
+                    string message = "Inserted " + tb_ProdName.Text + " Successfully";
+                    MessageBox.Show(message);
                     Response.Write("<script>alert('Insert successful');</script>");
                     Response.Redirect("Admin_Product.aspx");
                 }
-                else { Response.Write("<script>alert('Insert NOT successful');</script>"); }
+                else
+                {
+                    string message = "Not Successful";
+                    MessageBox.Show(message);
+                    Response.Write("<script>alert('Insert NOT successful');</script>");
+                }
             }
         }
 

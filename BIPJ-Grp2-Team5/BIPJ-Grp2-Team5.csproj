@@ -134,6 +134,7 @@
     <Content Include="css\isotope\style.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
+    <Content Include="Customer_AddReview.aspx" />
     <Content Include="Customer_Main.aspx" />
     <Content Include="Customer_ProductView.aspx" />
     <Content Include="Customization.aspx" />
@@ -160,9 +161,20 @@
     <Content Include="Education.aspx" />
     <Content Include="Admin_Education.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Images\Hagumi by Craft Egg Art Director, Osamu Nobuzawa.jpg" />
+    <Content Include="Images\Biodegradable Vacuum Cleaner.jpg" />
+    <Content Include="Images\EmptyStarRating.jpeg" />
+    <Content Include="Images\FullStarRating.jpeg" />
+    <Content Include="Images\Logo.jpeg" />
     <Content Include="Images\lunchybox.png" />
+    <Content Include="Images\lunchybox2.png" />
+    <Content Include="Images\Recycled Chandelier.jpg" />
+    <Content Include="Images\Recycled Chess Set.jpg" />
+    <Content Include="Images\Recycled Glass Tiles.jpg" />
+    <Content Include="Images\Recycled Tupperware.jfif" />
     <Content Include="Images\Refresh.jpeg" />
+    <Content Include="Images\Terrarium Lampshade.jpg" />
+    <Content Include="Images\Tote Bag.png" />
+    <Content Include="Images\Wind Chime.jpg" />
     <Content Include="img\air_pollutuon.jpg" />
     <Content Include="img\audiojungle.png" />
     <Content Include="img\cliemate.jpg" />
@@ -333,6 +345,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Customer_AddReview.aspx.cs">
+      <DependentUpon>Customer_AddReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_AddReview.aspx.designer.cs">
+      <DependentUpon>Customer_AddReview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Education.cs" />
     <Compile Include="Customer_Main.aspx.cs">
       <DependentUpon>Customer_Main.aspx</DependentUpon>
@@ -383,6 +402,7 @@
       <DependentUpon>ProductCatalogue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Review.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace BIPJ_Grp2_Team5
 {
@@ -58,12 +60,16 @@ namespace BIPJ_Grp2_Team5
                 {
                     string saveimg = Server.MapPath(" ") + "\\" + image;
                     fu_ProdImg.SaveAs(saveimg);
+                    string message = "Updated Product " + lbl_ProdID.Text + " Successfully";
+                    MessageBox.Show(message);
                     Response.Write("<script>alert('Update successful');</script>");
                     Response.Redirect("Admin_ProductDetails.aspx?Product_ID=" + datProdID);
 
                 }
                 else
                 {
+                    string message = "Update Not Successful";
+                    MessageBox.Show(message);
                     Response.Write("<script>alert('Update fail');</script>");
                 }
             }
