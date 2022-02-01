@@ -26,7 +26,7 @@
 					<!-- OVERVIEW -->
 					<div class="panel panel-headline">
 						<div class="panel-heading">
-							<h3 class="panel-title">Shop Overview</h3>
+							<h3 class="panel-title">EcoVerse Main Overview</h3>
 						</div>
 						<div class="panel-body">
 							<div class="row">
@@ -43,7 +43,7 @@
 								</div>
 								<div class="col-md-3">
 									<div class="metric">
-										<span class="icon"><a href="AdminProduct.aspx"><i class="fa fa-shopping-bag"></i></a></span>
+										<span class="icon"><a href="Admin_Product.aspx"><i class="fa fa-shopping-bag"></i></a></span>
 										<p>
 											<span class="number">
                                             <asp:Label ID="lbl_ProductCounts" runat="server"></asp:Label>
@@ -53,7 +53,7 @@
 								</div>
 								<div class="col-md-3">
 									<div class="metric">
-										<span class="icon"><a href="AdminOrders.aspx"><i class="fa fa-eye"></i></a></span>
+										<span class="icon"><a href="Admin_Orders.aspx"><i class="fa fa-eye"></i></a></span>
 										<p>
 											<span class="number">
                                             <asp:Label ID="lbl_OrdersCount" runat="server"></asp:Label>
