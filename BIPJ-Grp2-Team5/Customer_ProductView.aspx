@@ -89,11 +89,24 @@
             <td class="auto-style23">Review</td>
         </tr>
         <tr>
-            <td class="auto-style10" rowspan="6"></td>
+            <td class="auto-style10" rowspan="7"></td>
             <td colspan="2" class="text-center">
                 <asp:Image ID="img_prodImg" runat="server" Height="175px" Width="175px" />
             </td>
-            <td rowspan="6">&nbsp;</td>
+            <td rowspan="7">
+                <asp:GridView ID="gv_ProdReview" runat="server" AutoGenerateColumns="False" Width="308px">
+                    <Columns>
+                        <asp:BoundField DataField="Product_Rating" HeaderText="Rating" />
+                        <asp:BoundField DataField="Product_Comment" HeaderText="Comment" />
+                    </Columns>
+                </asp:GridView>
+            </td>
+        </tr>
+        <tr class="auto-style8">
+            <td class="auto-style19">Ratings</td>
+            <td class="auto-style14">
+                <asp:Label ID="lbl_prodReview" runat="server" Text="Label"></asp:Label>
+            </td>
         </tr>
         <tr class="auto-style8">
             <td class="auto-style19">Product ID</td>

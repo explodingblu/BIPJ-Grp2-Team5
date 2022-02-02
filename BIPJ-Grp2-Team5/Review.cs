@@ -128,7 +128,7 @@ namespace BIPJ_Grp2_Team5
             string rev_ID, rev_Com, rev_prodID, rev_custID;
             int rev_rating;
 
-            string queryStr = "SELECT * FROM Reviews Order By ID";
+            string queryStr = "SELECT * FROM Reviews Order By Review_ID";
 
             SqlConnection conn = new SqlConnection(_connStr);
             SqlCommand cmd = new SqlCommand(queryStr, conn);
@@ -138,11 +138,11 @@ namespace BIPJ_Grp2_Team5
 
             while (dr.Read())
             {
-                rev_ID = dr["ID"].ToString();
-                rev_rating = int.Parse(dr["Rating"].ToString());
-                rev_Com = dr["Comment"].ToString();
-                rev_prodID = dr["ProdID"].ToString();
-                rev_custID = dr["CustID"].ToString();
+                rev_ID = dr["Review_ID"].ToString();
+                rev_rating = int.Parse(dr["Product_Rating"].ToString());
+                rev_Com = dr["Product_Comment"].ToString();
+                rev_prodID = dr["Product_ID"].ToString();
+                rev_custID = dr["Customer_ID"].ToString();
                 Review a = new Review(rev_ID, rev_rating, rev_Com, rev_prodID, rev_custID);
                 reviewList.Add(a);
             }
@@ -172,11 +172,11 @@ namespace BIPJ_Grp2_Team5
 
             while (dr.Read())
             {
-                rev_ID = dr["ID"].ToString();
-                rev_rating = int.Parse(dr["Rating"].ToString());
-                rev_Com = dr["Comment"].ToString();
-                rev_prodID = dr["ProdID"].ToString();
-                rev_custID = dr["CustID"].ToString();
+                rev_ID = dr["Review_ID"].ToString();
+                rev_rating = int.Parse(dr["Product_Rating"].ToString());
+                rev_Com = dr["Product_Comment"].ToString();
+                rev_prodID = dr["Product_ID"].ToString();
+                rev_custID = dr["Customer_ID"].ToString();
                 Review a = new Review(rev_ID, rev_rating, rev_Com, rev_prodID, rev_custID);
                 reviewList.Add(a);
             }

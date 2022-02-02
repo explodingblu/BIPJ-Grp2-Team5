@@ -51,6 +51,24 @@ namespace BIPJ_Grp2_Team5
         protected global::System.Web.UI.WebControls.Image img_prodImg;
 
         /// <summary>
+        /// gv_ProdReview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv_ProdReview;
+
+        /// <summary>
+        /// lbl_prodReview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_prodReview;
+
+        /// <summary>
         /// lbl_prodID control.
         /// </summary>
         /// <remarks>

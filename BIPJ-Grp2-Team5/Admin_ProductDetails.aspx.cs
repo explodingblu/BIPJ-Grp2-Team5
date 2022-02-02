@@ -11,12 +11,15 @@ namespace BIPJ_Grp2_Team5
     {
         Product prod = null;
         Review aRev = new Review();
-        string prodID = Request.QueryString["Product_ID"].ToString();
+        Review aRate = new Review();
+        string prodID = "";
+        int totalrate = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 Product aProd = new Product();
+                prodID = Request.QueryString["Product_ID"].ToString();
                 prod = aProd.getProduct(prodID);
                 lbl_Breadcrumb.Text = "ID " + prodID.ToString();
                 lbl_prodName.Text = prod.Product_Name;
@@ -24,6 +27,21 @@ namespace BIPJ_Grp2_Team5
                 lbl_prodPrice.Text = prod.Product_Price.ToString("c");
                 lbl_Discount.Text = prod.Discount.ToString();
                 img_prodImg.ImageUrl = "~\\images\\" + prod.Product_Image;
+                List<Review> rateList = new List<Review>();
+                rateList = aRate.getReviewAllSpecifyProdID(prodID);
+                if (rateList.Count() == 0)
+                {
+                    lbl_prodReview.Text = "Not Rated Yet";
+                }
+                else
+                {
+                    foreach (var i in rateList)
+                    {
+                        totalrate += i.Product_Rating;
+                    }
+                    totalrate = totalrate / rateList.Count();
+                    lbl_prodReview.Text = totalrate.ToString() + " Star";
+                }
 
                 lbl_prodID.Text = prodID.ToString();
                 bind();
@@ -32,9 +50,9 @@ namespace BIPJ_Grp2_Team5
 
         protected void bind()
         {
-            List<Review> prodList = new List<Review>();
-            prodList = aRev.getReviewAllSpecifyProdID(prodID);
-            gv_ProdReview.DataSource = prodList;
+            List<Review> revList = new List<Review>();
+            revList = aRev.getReviewAllSpecifyProdID(prodID);
+            gv_ProdReview.DataSource = revList;
             gv_ProdReview.DataBind();
         }
 

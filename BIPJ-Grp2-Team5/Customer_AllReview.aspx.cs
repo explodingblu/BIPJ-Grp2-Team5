@@ -25,5 +25,10 @@ namespace BIPJ_Grp2_Team5
             gv_Reviews.DataSource = prodList;
             gv_Reviews.DataBind();
         }
+
+        protected void Btn_AddReview_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Customer_AddReview.aspx");
+        }
     }
 }

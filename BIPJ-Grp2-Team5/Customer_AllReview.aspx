@@ -34,7 +34,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-                    <asp:Button ID="Btn_AddReview" runat="server" Text="Add Review" />
+                    <asp:Button ID="Btn_AddReview" runat="server" Text="Add Review" OnClick="Btn_AddReview_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

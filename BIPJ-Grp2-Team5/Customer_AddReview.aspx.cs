@@ -15,7 +15,11 @@ namespace BIPJ_Grp2_Team5
         Review aRev = new Review();
         List<Product> prodList = new List<Product>();
         List<Review> revList = new List<Review>();
-        int reviewValue = 0;
+        List<Review> revlengthList = new List<Review>();
+        Review aReview = new Review();
+        string lastrevID;
+        int lastrevnum;
+        int reviewValue;
         protected void Page_Load(object sender, EventArgs e)
         {
             // Load sample data only once, when the page is first loaded.
@@ -24,6 +28,16 @@ namespace BIPJ_Grp2_Team5
                 DDLRateBindData();
                 ImgBtnBindData();
             }
+            revlengthList = aRev.getReviewAll();
+            if (revlengthList.Count == 0)
+            {
+                lastrevID = "0";
+            }
+            else
+            {
+                lastrevID = revlengthList[revlengthList.Count - 1].Review_ID;
+            }
+            lastrevnum = int.Parse(lastrevID) + 1;
         }
 
         protected void DDLRateBindData()
@@ -54,7 +68,6 @@ namespace BIPJ_Grp2_Team5
             ImgBtn_3.ImageUrl = "~/Images/EmptyStarRating.jpeg";
             ImgBtn_4.ImageUrl = "~/Images/EmptyStarRating.jpeg";
             ImgBtn_5.ImageUrl = "~/Images/EmptyStarRating.jpeg";
-            reviewValue = 1;
         }
 
         protected void ImgBtn_2_Click(object sender, ImageClickEventArgs e)
@@ -64,7 +77,6 @@ namespace BIPJ_Grp2_Team5
             ImgBtn_3.ImageUrl = "~/Images/EmptyStarRating.jpeg";
             ImgBtn_4.ImageUrl = "~/Images/EmptyStarRating.jpeg";
             ImgBtn_5.ImageUrl = "~/Images/EmptyStarRating.jpeg";
-            reviewValue = 2;
         }
 
         protected void ImgBtn_3_Click(object sender, ImageClickEventArgs e)
@@ -74,7 +86,6 @@ namespace BIPJ_Grp2_Team5
             ImgBtn_3.ImageUrl = "~/Images/FullStarRating.jpeg";
             ImgBtn_4.ImageUrl = "~/Images/EmptyStarRating.jpeg";
             ImgBtn_5.ImageUrl = "~/Images/EmptyStarRating.jpeg";
-            reviewValue = 3;
         }
 
         protected void ImgBtn_4_Click(object sender, ImageClickEventArgs e)
@@ -84,7 +95,6 @@ namespace BIPJ_Grp2_Team5
             ImgBtn_3.ImageUrl = "~/Images/FullStarRating.jpeg";
             ImgBtn_4.ImageUrl = "~/Images/FullStarRating.jpeg";
             ImgBtn_5.ImageUrl = "~/Images/EmptyStarRating.jpeg";
-            reviewValue = 4;
         }
 
         protected void ImgBtn_5_Click(object sender, ImageClickEventArgs e)
@@ -94,14 +104,32 @@ namespace BIPJ_Grp2_Team5
             ImgBtn_3.ImageUrl = "~/Images/FullStarRating.jpeg";
             ImgBtn_4.ImageUrl = "~/Images/FullStarRating.jpeg";
             ImgBtn_5.ImageUrl = "~/Images/FullStarRating.jpeg";
-            reviewValue = 5;
         }
 
         protected void btn_Create_Click(object sender, EventArgs e)
         {
             int result = 0;
-
-            Review rev = new Review(reviewValue, tb_Comment.Text, DDL_Product.SelectedValue, "");
+            if (ImgBtn_5.ImageUrl == "~/Images/FullStarRating.jpeg")
+            {
+                reviewValue = 5;
+            }
+            else if (ImgBtn_4.ImageUrl == "~/Images/FullStarRating.jpeg")
+            {
+                reviewValue = 4;
+            }
+            else if (ImgBtn_3.ImageUrl == "~/Images/FullStarRating.jpeg")
+            {
+                reviewValue = 3;
+            }
+            else if (ImgBtn_2.ImageUrl == "~/Images/FullStarRating.jpeg")
+            {
+                reviewValue = 2;
+            }
+            else if (ImgBtn_1.ImageUrl == "~/Images/FullStarRating.jpeg")
+            {
+                reviewValue = 1;
+            }
+            Review rev = new Review(lastrevnum.ToString(), reviewValue, tb_Comment.Text, DDL_Product.SelectedValue, "");
             result = rev.ReviewInsert();
 
             if (result > 0)
