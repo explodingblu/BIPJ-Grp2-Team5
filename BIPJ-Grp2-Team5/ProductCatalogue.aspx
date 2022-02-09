@@ -89,9 +89,15 @@
                                    </td>
                                </tr>
                                <tr>
+                                   <td class="text-center" colspan="2">
+                                       <asp:Label ID="Lbl_Rate" runat="server" Text="Label"></asp:Label>
+                                       &nbsp;<asp:Image ID="Img_Rate" runat="server" Height="20px" ImageUrl="~/Images/FullStarRating.jpeg" Width="20px" />
+                                   </td>
+                               </tr>
+                               <tr>
                                    <td>ID</td>
                                    <td>
-                                        <asp:Label ID="ProdID" runat="server" Text='<%#Eval("Product_ID") %>'></asp:Label>
+                                       <asp:Label ID="ProdID" runat="server" Text='<%#Eval("Product_ID") %>'></asp:Label>
                                    </td>
                                </tr>
                                <tr>
