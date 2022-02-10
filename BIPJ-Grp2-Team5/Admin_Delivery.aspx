@@ -46,12 +46,6 @@
                                             <asp:BoundField HeaderText="Total Amount" DataField="TotalAmount"/>
 											<asp:BoundField HeaderText="Payment Date" DataField="PaymentDate"/>
 											<asp:BoundField DataField="DeliveryStatus" HeaderText="Delivery Status" />
-											<asp:TemplateField ShowHeader="False">
-                                                <ItemTemplate>
-													<asp:Button ID="Button1" runat="server" CausesValidation="False" CommandName="Select" Text="Select" />
-                                                    <asp:Button ID="Button2" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete?');"/>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
                                         </Columns>
                                     </asp:GridView>
 								</div>

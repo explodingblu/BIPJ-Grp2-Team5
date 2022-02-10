@@ -68,7 +68,7 @@
 				<nav>
 					<ul class="nav">
 						<li><a href="Admin_Index.aspx" runat="server" id="tabadminindex"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
-						<li><a href="AdminUser.aspx" runat="server" id="tabadminuser"><i class="fa fa-users"></i> <span>Users</span></a></li>
+						<li><a href="Admin_User.aspx" runat="server" id="tabadminuser"><i class="fa fa-users"></i> <span>Users</span></a></li>
 						<li><a href="Admin_Product.aspx" runat="server"  id="tabadminproduct"><i class="fa fa-archive"></i>Products</a></li>
 						<li><a href="Admin_Orders.aspx" runat="server" id="tabadminorders"><i class="fa fa-paper-plane-o"></i>Orders</a></li>
 						<li><a href="Admin_Delivery.aspx" runat="server" id="tabadmindelivery"><i class="fa fa-truck"></i>Delivery</a></li>
